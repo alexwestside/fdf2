@@ -13,8 +13,14 @@ libft/ft_printf.h
 /Users/alex/ClionProjects/fdf2/libft/ft_printf.h
 libft/get_next_line.h
 /Users/alex/ClionProjects/fdf2/libft/get_next_line.h
+minilibx_macos/mlx.h
+/Users/alex/ClionProjects/fdf2/minilibx_macos/mlx.h
 math.h
 -
+
+/Users/alex/ClionProjects/fdf2/image.c
+fdf2.h
+/Users/alex/ClionProjects/fdf2/fdf2.h
 
 /Users/alex/ClionProjects/fdf2/libft/ft_printf.h
 libft.h
@@ -61,6 +67,8 @@ unistd.h
 /Users/alex/ClionProjects/fdf2/main.c
 fdf2.h
 /Users/alex/ClionProjects/fdf2/fdf2.h
+
+/Users/alex/ClionProjects/fdf2/minilibx_macos/mlx.h
 
 /Users/alex/ClionProjects/fdf2/sub.c
 fdf2.h

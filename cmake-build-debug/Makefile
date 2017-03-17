@@ -123,6 +123,33 @@ fdf2/fast:
 	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/build
 .PHONY : fdf2/fast
 
+image.o: image.c.o
+
+.PHONY : image.o
+
+# target to build an object file
+image.c.o:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/image.c.o
+.PHONY : image.c.o
+
+image.i: image.c.i
+
+.PHONY : image.i
+
+# target to preprocess a source file
+image.c.i:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/image.c.i
+.PHONY : image.c.i
+
+image.s: image.c.s
+
+.PHONY : image.s
+
+# target to generate assembly for a file
+image.c.s:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/image.c.s
+.PHONY : image.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -213,6 +240,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... fdf2"
+	@echo "... image.o"
+	@echo "... image.i"
+	@echo "... image.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

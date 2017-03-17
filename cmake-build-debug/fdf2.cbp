@@ -83,6 +83,9 @@
 		<Unit filename="/Users/alex/ClionProjects/fdf2/fdf2.h">
 			<Option target="fdf2"/>
 		</Unit>
+		<Unit filename="/Users/alex/ClionProjects/fdf2/image.c">
+			<Option target="fdf2"/>
+		</Unit>
 		<Unit filename="/Users/alex/ClionProjects/fdf2/main.c">
 			<Option target="fdf2"/>
 		</Unit>

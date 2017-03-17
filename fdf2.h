@@ -5,8 +5,10 @@
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
 # include "libft/get_next_line.h"
-# include "minilibx_macos/mlx.h"
+#	include <mlx.h>
 # include <math.h>
+#define HIGHT 400
+#define WIDTH 400
 
 typedef struct		s_point
 {
@@ -54,5 +56,6 @@ void ft_init_coord(char *str, t_point **p, int *y, int *x);
 int ft_init_lines(t_line ***line, char *s, int fd);
 void ft_fdf_error(int id);
 void ft_count_center(t_mlx **mlx, t_map *map);
+void ft_put_image(t_fdf **fdf, int h, int w, char *s);
 
 #endif //FDF2_FDF2_H

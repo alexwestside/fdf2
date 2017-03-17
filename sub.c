@@ -15,5 +15,4 @@ void ft_count_center(t_mlx **mlx, t_map *map)
 	//float j = map->line[0]->point[0]->x;
 	(*mlx)->center->x = (map->line[y_len - 1]->point[x_len - 1]->x + map->line[0]->point[0]->x) / 2;
 	(*mlx)->center->y = (map->line[y_len - 1]->point[x_len - 1]->y + map->line[0]->point[0]->y) / 2;
-
 }
