@@ -5,7 +5,7 @@
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
 # include "libft/get_next_line.h"
-//# include <mlx.h>
+# include "minilibx_macos/mlx.h"
 # include <math.h>
 
 typedef struct		s_point
@@ -37,7 +37,7 @@ typedef struct		s_mlx
 	void			*mlx;
 	void			*win;
 	void			*img;
-	t_point			center;
+	t_point			*center;
 	//int			len_line;
 }					t_mlx;
 
