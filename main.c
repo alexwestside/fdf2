@@ -15,8 +15,6 @@ void ft_init_lines(t_line ***line, char *s, int fd)
 	}
 	close(fd);
 	*line = (t_line **)malloc(sizeof(t_line *) * (cl + 1));
-	//(*(*line))->point = NULL;
-	//(*(*line))->len = 0;
 }
 
 void ft_init_coord(char *str, t_point **p, int *y, int *x)
@@ -75,7 +73,6 @@ void ft_parse_fdf(t_map **map, char *s, int fd)
 		y++;
 		l++;
 	}
-
 }
 
 int main(int ac, char **av)
@@ -84,9 +81,6 @@ int main(int ac, char **av)
 
 	fdf = (t_fdf *)malloc(sizeof(t_fdf));
 	ft_parse_fdf(&fdf->map, av[1], 0);
-
-
-
 
 
 	fdf->mlx = (t_mlx *)malloc(sizeof(t_mlx));
