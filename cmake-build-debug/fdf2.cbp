@@ -86,6 +86,12 @@
 		<Unit filename="/Users/alex/ClionProjects/fdf2/main.c">
 			<Option target="fdf2"/>
 		</Unit>
+		<Unit filename="/Users/alex/ClionProjects/fdf2/sub.c">
+			<Option target="fdf2"/>
+		</Unit>
+		<Unit filename="/Users/alex/ClionProjects/fdf2/usage.c">
+			<Option target="fdf2"/>
+		</Unit>
 		<Unit filename="/Users/alex/ClionProjects/fdf2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

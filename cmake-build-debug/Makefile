@@ -150,6 +150,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/main.c.s
 .PHONY : main.c.s
 
+sub.o: sub.c.o
+
+.PHONY : sub.o
+
+# target to build an object file
+sub.c.o:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/sub.c.o
+.PHONY : sub.c.o
+
+sub.i: sub.c.i
+
+.PHONY : sub.i
+
+# target to preprocess a source file
+sub.c.i:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/sub.c.i
+.PHONY : sub.c.i
+
+sub.s: sub.c.s
+
+.PHONY : sub.s
+
+# target to generate assembly for a file
+sub.c.s:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/sub.c.s
+.PHONY : sub.c.s
+
+usage.o: usage.c.o
+
+.PHONY : usage.o
+
+# target to build an object file
+usage.c.o:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/usage.c.o
+.PHONY : usage.c.o
+
+usage.i: usage.c.i
+
+.PHONY : usage.i
+
+# target to preprocess a source file
+usage.c.i:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/usage.c.i
+.PHONY : usage.c.i
+
+usage.s: usage.c.s
+
+.PHONY : usage.s
+
+# target to generate assembly for a file
+usage.c.s:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/usage.c.s
+.PHONY : usage.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +216,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sub.o"
+	@echo "... sub.i"
+	@echo "... sub.s"
+	@echo "... usage.o"
+	@echo "... usage.i"
+	@echo "... usage.s"
 .PHONY : help
 
 

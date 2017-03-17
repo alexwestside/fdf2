@@ -37,6 +37,7 @@ typedef struct		s_mlx
 	void			*mlx;
 	void			*win;
 	void			*img;
+	t_point			center;
 	//int			len_line;
 }					t_mlx;
 
@@ -47,5 +48,11 @@ typedef	struct		s_fdf
 }					t_fdf;
 
 int main(int ac, char **av);
+void ft_parse_fdf(t_map **map, char *s, int fd);
+void ft_init_points(char *s, t_line **l, int *y);
+void ft_init_coord(char *str, t_point **p, int *y, int *x);
+int ft_init_lines(t_line ***line, char *s, int fd);
+void ft_fdf_error(int id);
+void ft_count_center(t_mlx **mlx, t_map *map);
 
 #endif //FDF2_FDF2_H
