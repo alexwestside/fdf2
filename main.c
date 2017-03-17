@@ -82,6 +82,5 @@ int main(int ac, char **av)
 	fdf = (t_fdf *)malloc(sizeof(t_fdf));
 	ft_parse_fdf(&fdf->map, av[1], 0);
 
-
 	fdf->mlx = (t_mlx *)malloc(sizeof(t_mlx));
 }
