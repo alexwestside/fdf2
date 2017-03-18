@@ -9,3 +9,5 @@ set(SOURCE_FILES main.c fdf2.h usage.c sub.c image.c)
 add_executable(fdf2 ${SOURCE_FILES})
 
 target_link_libraries(fdf2 ${CMAKE_SOURCE_DIR}/libft/libft.a)
+
+#target_link_libraries(fdf2 ${CMAKE_SOURCE_DIR}/minilibx_macos/libmlx.a)

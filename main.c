@@ -92,5 +92,5 @@ int main(int ac, char **av)
 
 
 
-
+	mlx_loop(fdf->mlx->mlx);
 }

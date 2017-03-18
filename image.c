@@ -5,4 +5,5 @@ void ft_put_image(t_fdf **fdf, int h, int w, char *s)
 {
 	(*(*fdf)->mlx).mlx = mlx_init();
 	(*(*fdf)->mlx).win = mlx_new_window((*(*fdf)->mlx).mlx, h, w, s);
+	(*(*fdf)->mlx).img = mlx_new_image((*(*fdf)->mlx).mlx, h, w);
 }
