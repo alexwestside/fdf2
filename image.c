@@ -16,5 +16,6 @@ void ft_put_image(t_fdf **fdf, int h, int w, char *s)
 
 	//mlx_loop_hook((*(*fdf)->mlx).mlx, &ft_event, fdf);
 	mlx_key_hook((*(*fdf)->mlx).win, ft_key_hook, fdf);
+	mlx_loop((*(*fdf)->mlx).mlx);
 
 }

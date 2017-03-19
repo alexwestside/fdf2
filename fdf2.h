@@ -39,6 +39,10 @@ typedef struct		s_mlx
 	void			*mlx;
 	void			*win;
 	void			*img;
+	char			*ing_str;
+	int				bits_per_pixel;
+	int				endian;
+	int				s_line;
 	t_point			*center;
 	//int			len_line;
 }					t_mlx;
