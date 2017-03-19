@@ -81,28 +81,28 @@ CMakeFiles/fdf2.dir/main.c.o.provides: CMakeFiles/fdf2.dir/main.c.o.requires
 CMakeFiles/fdf2.dir/main.c.o.provides.build: CMakeFiles/fdf2.dir/main.c.o
 
 
-CMakeFiles/fdf2.dir/usage.c.o: CMakeFiles/fdf2.dir/flags.make
-CMakeFiles/fdf2.dir/usage.c.o: ../usage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/fdf2.dir/usage.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf2.dir/usage.c.o   -c /Users/alex/ClionProjects/fdf2/usage.c
+CMakeFiles/fdf2.dir/image.c.o: CMakeFiles/fdf2.dir/flags.make
+CMakeFiles/fdf2.dir/image.c.o: ../image.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/fdf2.dir/image.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf2.dir/image.c.o   -c /Users/alex/ClionProjects/fdf2/image.c
 
-CMakeFiles/fdf2.dir/usage.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf2.dir/usage.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alex/ClionProjects/fdf2/usage.c > CMakeFiles/fdf2.dir/usage.c.i
+CMakeFiles/fdf2.dir/image.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf2.dir/image.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alex/ClionProjects/fdf2/image.c > CMakeFiles/fdf2.dir/image.c.i
 
-CMakeFiles/fdf2.dir/usage.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf2.dir/usage.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alex/ClionProjects/fdf2/usage.c -o CMakeFiles/fdf2.dir/usage.c.s
+CMakeFiles/fdf2.dir/image.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf2.dir/image.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alex/ClionProjects/fdf2/image.c -o CMakeFiles/fdf2.dir/image.c.s
 
-CMakeFiles/fdf2.dir/usage.c.o.requires:
+CMakeFiles/fdf2.dir/image.c.o.requires:
 
-.PHONY : CMakeFiles/fdf2.dir/usage.c.o.requires
+.PHONY : CMakeFiles/fdf2.dir/image.c.o.requires
 
-CMakeFiles/fdf2.dir/usage.c.o.provides: CMakeFiles/fdf2.dir/usage.c.o.requires
-	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/usage.c.o.provides.build
-.PHONY : CMakeFiles/fdf2.dir/usage.c.o.provides
+CMakeFiles/fdf2.dir/image.c.o.provides: CMakeFiles/fdf2.dir/image.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/image.c.o.provides.build
+.PHONY : CMakeFiles/fdf2.dir/image.c.o.provides
 
-CMakeFiles/fdf2.dir/usage.c.o.provides.build: CMakeFiles/fdf2.dir/usage.c.o
+CMakeFiles/fdf2.dir/image.c.o.provides.build: CMakeFiles/fdf2.dir/image.c.o
 
 
 CMakeFiles/fdf2.dir/sub.c.o: CMakeFiles/fdf2.dir/flags.make
@@ -129,46 +129,45 @@ CMakeFiles/fdf2.dir/sub.c.o.provides: CMakeFiles/fdf2.dir/sub.c.o.requires
 CMakeFiles/fdf2.dir/sub.c.o.provides.build: CMakeFiles/fdf2.dir/sub.c.o
 
 
-CMakeFiles/fdf2.dir/image.c.o: CMakeFiles/fdf2.dir/flags.make
-CMakeFiles/fdf2.dir/image.c.o: ../image.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fdf2.dir/image.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf2.dir/image.c.o   -c /Users/alex/ClionProjects/fdf2/image.c
+CMakeFiles/fdf2.dir/usage.c.o: CMakeFiles/fdf2.dir/flags.make
+CMakeFiles/fdf2.dir/usage.c.o: ../usage.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fdf2.dir/usage.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf2.dir/usage.c.o   -c /Users/alex/ClionProjects/fdf2/usage.c
 
-CMakeFiles/fdf2.dir/image.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf2.dir/image.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alex/ClionProjects/fdf2/image.c > CMakeFiles/fdf2.dir/image.c.i
+CMakeFiles/fdf2.dir/usage.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf2.dir/usage.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alex/ClionProjects/fdf2/usage.c > CMakeFiles/fdf2.dir/usage.c.i
 
-CMakeFiles/fdf2.dir/image.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf2.dir/image.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alex/ClionProjects/fdf2/image.c -o CMakeFiles/fdf2.dir/image.c.s
+CMakeFiles/fdf2.dir/usage.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf2.dir/usage.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alex/ClionProjects/fdf2/usage.c -o CMakeFiles/fdf2.dir/usage.c.s
 
-CMakeFiles/fdf2.dir/image.c.o.requires:
+CMakeFiles/fdf2.dir/usage.c.o.requires:
 
-.PHONY : CMakeFiles/fdf2.dir/image.c.o.requires
+.PHONY : CMakeFiles/fdf2.dir/usage.c.o.requires
 
-CMakeFiles/fdf2.dir/image.c.o.provides: CMakeFiles/fdf2.dir/image.c.o.requires
-	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/image.c.o.provides.build
-.PHONY : CMakeFiles/fdf2.dir/image.c.o.provides
+CMakeFiles/fdf2.dir/usage.c.o.provides: CMakeFiles/fdf2.dir/usage.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/usage.c.o.provides.build
+.PHONY : CMakeFiles/fdf2.dir/usage.c.o.provides
 
-CMakeFiles/fdf2.dir/image.c.o.provides.build: CMakeFiles/fdf2.dir/image.c.o
+CMakeFiles/fdf2.dir/usage.c.o.provides.build: CMakeFiles/fdf2.dir/usage.c.o
 
 
 # Object files for target fdf2
 fdf2_OBJECTS = \
 "CMakeFiles/fdf2.dir/main.c.o" \
-"CMakeFiles/fdf2.dir/usage.c.o" \
+"CMakeFiles/fdf2.dir/image.c.o" \
 "CMakeFiles/fdf2.dir/sub.c.o" \
-"CMakeFiles/fdf2.dir/image.c.o"
+"CMakeFiles/fdf2.dir/usage.c.o"
 
 # External object files for target fdf2
 fdf2_EXTERNAL_OBJECTS =
 
 fdf2: CMakeFiles/fdf2.dir/main.c.o
-fdf2: CMakeFiles/fdf2.dir/usage.c.o
-fdf2: CMakeFiles/fdf2.dir/sub.c.o
 fdf2: CMakeFiles/fdf2.dir/image.c.o
+fdf2: CMakeFiles/fdf2.dir/sub.c.o
+fdf2: CMakeFiles/fdf2.dir/usage.c.o
 fdf2: CMakeFiles/fdf2.dir/build.make
-fdf2: ../libft/libft.a
 fdf2: CMakeFiles/fdf2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable fdf2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fdf2.dir/link.txt --verbose=$(VERBOSE)
@@ -179,9 +178,9 @@ CMakeFiles/fdf2.dir/build: fdf2
 .PHONY : CMakeFiles/fdf2.dir/build
 
 CMakeFiles/fdf2.dir/requires: CMakeFiles/fdf2.dir/main.c.o.requires
-CMakeFiles/fdf2.dir/requires: CMakeFiles/fdf2.dir/usage.c.o.requires
-CMakeFiles/fdf2.dir/requires: CMakeFiles/fdf2.dir/sub.c.o.requires
 CMakeFiles/fdf2.dir/requires: CMakeFiles/fdf2.dir/image.c.o.requires
+CMakeFiles/fdf2.dir/requires: CMakeFiles/fdf2.dir/sub.c.o.requires
+CMakeFiles/fdf2.dir/requires: CMakeFiles/fdf2.dir/usage.c.o.requires
 
 .PHONY : CMakeFiles/fdf2.dir/requires
 

@@ -5,7 +5,7 @@
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
 # include "libft/get_next_line.h"
-#include "minilibx/mlx.h"
+#include "minilibx_macos/mlx.h"
 # include <math.h>
 #define HIGHT 400
 #define WIDTH 400

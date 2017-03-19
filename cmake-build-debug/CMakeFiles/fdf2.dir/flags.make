@@ -6,5 +6,5 @@ C_FLAGS =  -lmlx -framework OpenGL -framework AppKit -g -isysroot /Applications/
 
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/Users/alex/ClionProjects/fdf2/includes -I/Users/alex/ClionProjects/fdf2/libft -I/Users/alex/ClionProjects/fdf2/minilibx 
 
