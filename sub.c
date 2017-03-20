@@ -4,17 +4,18 @@
 void ft_map_center(t_point **center, t_map **map_c, t_map *map)
 {
 	int i = 0;
-	int j = 0;
+	int j;
 
 	 *map_c = (t_map *)malloc(sizeof(t_map));
 	(*map_c)->len = (*map).len;
 	(*map_c)->line = (t_line **)malloc(sizeof(t_line *) * (*map_c)->len);
-	(*map_c)->line[i]->len = (*(*map_c)->line)->len;
-	(*(*map_c)->line)->point = (t_point **)malloc(sizeof(t_point *) * (*(map)->line)->len);
-	while (i <= (*map_c)->len)
+	while (i < (*map_c)->len)
 	{
+		j = 0;
 		(*map_c)->line[i] = (t_line *)malloc(sizeof(t_line));
-		while (j <= (*map_c)->line[i]->len)
+		(*map_c)->line[i]->point = (t_point **)malloc(sizeof(t_point *) * (*(map)->line)->len);
+		(*map_c)->line[i]->len = (*map).line[i]->len;
+		while (j < (*map_c)->line[i]->len)
 		{
 			(*map_c)->line[i]->point[j] = (t_point *)malloc(sizeof(t_point));
 			(*map_c)->line[i]->point[j]->x = (*map).line[i]->point[j]->x - (*center)->x;
@@ -25,14 +26,9 @@ void ft_map_center(t_point **center, t_map **map_c, t_map *map)
 			(*map_c)->line[i]->point[j]->b = (*map).line[i]->point[j]->b;
 			j++;
 		}
+		(*map_c)->line[i]->point[j] = NULL;
 		i++;
 	}
-
-
-
-
-
-
 }
 
 void ft_count_center(t_mlx **mlx, t_map *map, t_map **map_c)
