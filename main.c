@@ -87,7 +87,7 @@ int main(int ac, char **av)
 		ft_fdf_error(1);
 	!(fdf = (t_fdf *)malloc(sizeof(t_fdf))) ? ft_fdf_error(2) : 0;
 	ft_parse_fdf(&fdf->map, av[1], 0);
-	ft_count_center(&fdf->mlx, fdf->map);
+	ft_count_center(&fdf->mlx, fdf->map, &fdf->map_c);
 	ft_put_image(&fdf, HIGHT, WIDTH, "42 fdf");
 
 
