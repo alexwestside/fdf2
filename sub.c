@@ -26,9 +26,10 @@ void ft_map_center(t_point **center, t_map **map_c, t_map *map)
 			(*map_c)->line[i]->point[j]->b = (*map).line[i]->point[j]->b;
 			j++;
 		}
-		(*map_c)->line[i]->point[j] = NULL;
+		//(*map_c)->line[i]->point[j] = NULL;
 		i++;
 	}
+	//(*map_c)->line[i] = NULL;
 }
 
 void ft_count_center(t_mlx **mlx, t_map *map, t_map **map_c)
