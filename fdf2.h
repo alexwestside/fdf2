@@ -7,8 +7,8 @@
 # include "libft/get_next_line.h"
 #include "minilibx_macos/mlx.h"
 # include <math.h>
-#define HIGHT 400
-#define WIDTH 400
+#define W_HIGHT 400
+#define W_WIDTH 400
 
 typedef struct		s_point
 {
@@ -62,5 +62,9 @@ int ft_init_lines(t_line ***line, char *s, int fd);
 void ft_fdf_error(int id);
 void ft_count_center(t_mlx **mlx, t_map *map, t_map **map_c);
 void ft_put_image(t_fdf **fdf, int h, int w, char *s);
+int ft_key_hook(int key);
+void ft_draw_map_c(t_fdf **fdf);
+void ft_draw_line(t_point **p1, t_point **p2, t_map *m);
+
 
 #endif //FDF2_FDF2_H
