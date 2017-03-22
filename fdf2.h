@@ -51,6 +51,7 @@ typedef	struct		s_fdf
 {
 	t_map			*map;
 	t_map			*map_c;
+	t_map			*map_up;
 	t_mlx			*mlx;
 }					t_fdf;
 
