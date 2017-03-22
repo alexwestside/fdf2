@@ -3,13 +3,13 @@
 
 void ft_map_center(t_point **center, t_map **map_c, t_map *map)
 {
-	int i = 0;
+	int i = -1;
 	int j;
 
 	 *map_c = (t_map *)malloc(sizeof(t_map));
 	(*map_c)->len = (*map).len;
 	(*map_c)->line = (t_line **)malloc(sizeof(t_line *) * (*map_c)->len);
-	while (i < (*map_c)->len)
+	while (++i < (*map_c)->len)
 	{
 		j = 0;
 		(*map_c)->line[i] = (t_line *)malloc(sizeof(t_line));
@@ -26,10 +26,9 @@ void ft_map_center(t_point **center, t_map **map_c, t_map *map)
 			(*map_c)->line[i]->point[j]->b = (*map).line[i]->point[j]->b;
 			j++;
 		}
-		//(*map_c)->line[i]->point[j] = NULL;
-		i++;
+		(*map_c)->line[i]->point[j] = NULL;
 	}
-//	(*map_c)->line[i] = NULL;
+	(*map_c)->line[i] = NULL;
 }
 
 void ft_count_center(t_mlx **mlx, t_map *map, t_map **map_c)

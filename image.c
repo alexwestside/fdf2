@@ -9,12 +9,52 @@ int ft_draw_out(t_point **p)
 		return (1);
 }
 
-void ft_draw_line(t_point **p1, t_point **p2, t_map *m)
+void ft_draw_pixel(t_point **p, t_map **mapm, t_mlx **mlx)
 {
-	if(!ft_draw_out(p1) && !ft_draw_out(p2))
-		return ;
+	int i;
 
+	i = (((int)(*p)->x * 4) + ((int)(*p)->y * (*mlx)->s_line));
+	i < 0 ? i = -i : 0;
+	(*mlx)->img_str[i] = (char)0xFF;
+	(*mlx)->img_str[++i] = 0;
+	(*mlx)->img_str[++i] = 0;
+}
 
+void ft_draw_line(t_point **p1, t_point **p2, t_map *m, t_mlx **mlx)
+{
+	int dx;
+	int dy;
+	int sx;
+	int sy;
+	int error;
+
+	dx = 0;
+	dy = 0;
+	sx = 0;
+	dy = 0;
+	error = 0;
+//	if(!ft_draw_out(p1) && !ft_draw_out(p2))
+//		return ;
+	dx = (int)fabsf((*p1)->x - (*p2)->x);
+	dy = (int)fabsf((*p1)->y - (*p2)->y);
+	sx = (*p1)->x < (*p2)->x ? 1 : -1;
+	sy = (*p1)->y < (*p2)->y ? 1 : -1;
+	ft_draw_pixel(p2, &m, mlx);
+	while ((*p1)->x != (*p2)->x || (*p1)->y != (*p2)->y)
+	{
+		ft_draw_pixel(p1, &m, mlx);
+		error = (dx - dy) * 2;
+		if (error > -dy)
+		{
+			error -= dy;
+			(*p1)->x += sx;
+		}
+		if (error < dx)
+		{
+			error += dx;
+			(*p1)->y += sy;
+		}
+	}
 }
 
 void ft_draw_map_c(t_fdf **fdf)
@@ -34,39 +74,37 @@ void ft_draw_map_c(t_fdf **fdf)
 		while (j++ < m->line[i]->len)
 		{
 			p1 = m->line[i]->point[j];
-			p2 = m->line[i]->point[j + 1];
-			p3 = m->line[i + 1]->point[j];
-			if (p2)
-				ft_draw_line(&p1, &p2, m);
-			if (p3)
-				ft_draw_line(&p1, &p3, m);
+			p2 = m->line[i]->point[j + 1] ? m->line[i]->point[j + 1] : NULL;
+			p3 = m->line[i + 1] ? m->line[i + 1]->point[j] : NULL;
+			if (p1 && p2)
+				ft_draw_line(&p1, &p2, m, &(*fdf)->mlx);
+			if (p1 && p3)
+				ft_draw_line(&p1, &p3, m, &(*fdf)->mlx);
 		}
 	}
 }
 
-int ft_key_hook(int key)
+int ft_key_hook(int key, t_fdf *fdf)
 {
 	if (key == 53)
+	{
+		mlx_destroy_window((*fdf->mlx).mlx, (*fdf->mlx).win);
 		exit(0);
+	}
 	return (1);
 }
 
-void ft_put_image(t_fdf **fdf, int h, int w, char *s)
+void ft_get_image(t_fdf **fdf, int h, int w, char *s)
 {
 	(*(*fdf)->mlx).mlx = mlx_init();
 	(*(*fdf)->mlx).win = mlx_new_window((*(*fdf)->mlx).mlx, h, w, s);
+}
+
+void ft_put_image(t_fdf **fdf, int h, int w)
+{
 	(*(*fdf)->mlx).img = mlx_new_image((*(*fdf)->mlx).mlx, h, w);
 	(*(*fdf)->mlx).img_str = mlx_get_data_addr((*(*fdf)->mlx).img, &((*(*fdf)->mlx).bpp),&((*(*fdf)->mlx).s_line), &((*(*fdf)->mlx).endian));
-
-	mlx_key_hook((*(*fdf)->mlx).win, ft_key_hook, fdf);
-
 	ft_draw_map_c(fdf);
-
-
-
-
-	mlx_loop((*(*fdf)->mlx).mlx);
-
-//	(*(*fdf)->map_c)
-
+	mlx_put_image_to_window((*(*fdf)->mlx).mlx, (*(*fdf)->mlx).win, (*(*fdf)->mlx).img, -100, -100);
+	mlx_destroy_window((*(*fdf)->mlx).mlx, (*(*fdf)->mlx).win);
 }
