@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fdf2.dir/main.c.o"
-  "CMakeFiles/fdf2.dir/image.c.o"
-  "CMakeFiles/fdf2.dir/sub.c.o"
   "CMakeFiles/fdf2.dir/usage.c.o"
+  "CMakeFiles/fdf2.dir/sub.c.o"
+  "CMakeFiles/fdf2.dir/image.c.o"
   "fdf2.pdb"
   "fdf2"
 )

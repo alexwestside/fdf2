@@ -56,11 +56,17 @@ void ft_put_image(t_fdf **fdf, int h, int w, char *s)
 	(*(*fdf)->mlx).mlx = mlx_init();
 	(*(*fdf)->mlx).win = mlx_new_window((*(*fdf)->mlx).mlx, h, w, s);
 	(*(*fdf)->mlx).img = mlx_new_image((*(*fdf)->mlx).mlx, h, w);
+	(*(*fdf)->mlx).img_str = mlx_get_data_addr((*(*fdf)->mlx).img, &((*(*fdf)->mlx).bpp),&((*(*fdf)->mlx).s_line), &((*(*fdf)->mlx).endian));
 
-	//mlx_loop_hook((*(*fdf)->mlx).mlx, &ft_event, fdf);
 	mlx_key_hook((*(*fdf)->mlx).win, ft_key_hook, fdf);
-	mlx_loop((*(*fdf)->mlx).mlx);
+
 	ft_draw_map_c(fdf);
+
+
+
+
+	mlx_loop((*(*fdf)->mlx).mlx);
+
 //	(*(*fdf)->map_c)
 
 }

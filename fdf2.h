@@ -5,7 +5,7 @@
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
 # include "libft/get_next_line.h"
-#include "minilibx_macos/mlx.h"
+#include <mlx.h>
 # include <math.h>
 #define W_HIGHT 400
 #define W_WIDTH 400
@@ -39,8 +39,8 @@ typedef struct		s_mlx
 	void			*mlx;
 	void			*win;
 	void			*img;
-	char			*ing_str;
-	int				bits_per_pixel;
+	char			*img_str;
+	int				bpp;
 	int				endian;
 	int				s_line;
 	t_point			*center;

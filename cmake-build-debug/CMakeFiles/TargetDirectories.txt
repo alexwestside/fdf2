@@ -1,3 +1,3 @@
-/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/alex/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir
+/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir
