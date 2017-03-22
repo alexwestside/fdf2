@@ -9,15 +9,15 @@ int ft_draw_out(t_point **p)
 		return (1);
 }
 
-void ft_draw_pixel(t_point **p, t_map **mapm, t_mlx **mlx)
+void ft_draw_pixel(t_point **p, t_map **mapm, t_mlx **mlx, int color)
 {
 	int i;
 
 	i = (((int)(*p)->x * 4) + ((int)(*p)->y * (*mlx)->s_line));
 	i < 0 ? i = -i : 0;
-	(*mlx)->img_str[i] = (char)0xFF;
-	(*mlx)->img_str[++i] = 0;
-	(*mlx)->img_str[++i] = 0;
+	(*mlx)->img_str[i] = color;
+	(*mlx)->img_str[++i] = color >> 8;
+	(*mlx)->img_str[++i] = color >> 16;
 }
 
 void ft_draw_line(t_point **p1, t_point **p2, t_map *m, t_mlx **mlx)
@@ -39,10 +39,10 @@ void ft_draw_line(t_point **p1, t_point **p2, t_map *m, t_mlx **mlx)
 	dy = (int)fabsf((*p1)->y - (*p2)->y);
 	sx = (*p1)->x < (*p2)->x ? 1 : -1;
 	sy = (*p1)->y < (*p2)->y ? 1 : -1;
-	ft_draw_pixel(p2, &m, mlx);
+	ft_draw_pixel(p2, &m, mlx, 0xFFFFFF);
 	while ((*p1)->x != (*p2)->x || (*p1)->y != (*p2)->y)
 	{
-		ft_draw_pixel(p1, &m, mlx);
+		ft_draw_pixel(p1, &m, mlx, 0xFFFFFF);
 		error = (dx - dy) * 2;
 		if (error > -dy)
 		{
@@ -68,10 +68,10 @@ void ft_draw_map_c(t_fdf **fdf)
 
 	m = (*fdf)->map_c;
 	i = -1;
-	while (i++ < m->len)
+	while (++i < m->len)
 	{
 		j = -1;
-		while (j++ < m->line[i]->len)
+		while (++j < m->line[i]->len)
 		{
 			p1 = m->line[i]->point[j];
 			p2 = m->line[i]->point[j + 1] ? m->line[i]->point[j + 1] : NULL;
@@ -94,7 +94,7 @@ int ft_key_hook(int key, t_fdf *fdf)
 	return (1);
 }
 
-void ft_get_image(t_fdf **fdf, int h, int w, char *s)
+void ft_get_window(t_fdf **fdf, int h, int w, char *s)
 {
 	(*(*fdf)->mlx).mlx = mlx_init();
 	(*(*fdf)->mlx).win = mlx_new_window((*(*fdf)->mlx).mlx, h, w, s);
@@ -106,5 +106,13 @@ void ft_put_image(t_fdf **fdf, int h, int w)
 	(*(*fdf)->mlx).img_str = mlx_get_data_addr((*(*fdf)->mlx).img, &((*(*fdf)->mlx).bpp),&((*(*fdf)->mlx).s_line), &((*(*fdf)->mlx).endian));
 	ft_draw_map_c(fdf);
 	mlx_put_image_to_window((*(*fdf)->mlx).mlx, (*(*fdf)->mlx).win, (*(*fdf)->mlx).img, -100, -100);
-	mlx_destroy_window((*(*fdf)->mlx).mlx, (*(*fdf)->mlx).win);
+	//mlx_destroy_window((*(*fdf)->mlx).mlx, (*(*fdf)->mlx).win);
 }
+
+/*
+int ft_expose(t_fdf **fdf, int h, int w)
+{
+	ft_put_image(fdf, h, w);
+	return (0);
+}
+ */

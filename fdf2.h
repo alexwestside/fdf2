@@ -61,12 +61,13 @@ void ft_init_coord(char *str, t_point **p, int *y, int *x);
 int ft_init_lines(t_line ***line, char *s, int fd);
 void ft_fdf_error(int id);
 void ft_count_center(t_mlx **mlx, t_map *map, t_map **map_c);
-void ft_get_image(t_fdf **fdf, int h, int w, char *s);
+void ft_get_window(t_fdf **fdf, int h, int w, char *s);
 void ft_put_image(t_fdf **fdf, int h, int w);
 int ft_key_hook(int key, t_fdf *fdf);
 void ft_draw_map_c(t_fdf **fdf);
 void ft_draw_line(t_point **p1, t_point **p2, t_map *m, t_mlx **mlx);
-void ft_draw_pixel(t_point **p2, t_map **mapm, t_mlx **mlx);
+void ft_draw_pixel(t_point **p2, t_map **mapm, t_mlx **mlx, int color);
+//int ft_expose(t_fdf **fdf, int h, int w);
 
 
 #endif //FDF2_FDF2_H
