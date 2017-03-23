@@ -85,6 +85,9 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/fdf2/fdf2.h">
 			<Option target="fdf2"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/fdf2/hook.c">
+			<Option target="fdf2"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/fdf2/image.c">
 			<Option target="fdf2"/>
 		</Unit>

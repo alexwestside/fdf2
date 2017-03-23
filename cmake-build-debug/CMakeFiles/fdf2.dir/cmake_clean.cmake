@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fdf2.dir/sub.c.o"
   "CMakeFiles/fdf2.dir/image.c.o"
   "CMakeFiles/fdf2.dir/update_coord.c.o"
+  "CMakeFiles/fdf2.dir/hook.c.o"
   "fdf2.pdb"
   "fdf2"
 )

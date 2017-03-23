@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/nfs/2016/o/orizhiy/ClionProjects/fdf2/hook.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/hook.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/image.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/image.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/main.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/main.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/sub.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/sub.c.o"

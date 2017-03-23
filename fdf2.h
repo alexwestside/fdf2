@@ -7,12 +7,13 @@
 # include "libft/get_next_line.h"
 #include <mlx.h>
 # include <math.h>
-#define W_HIGHT 400
-#define W_WIDTH 400
+#define W_HIGHT 800
+#define W_WIDTH 800
 
 typedef struct		s_point
 {
 	float 			x;
+
 	float 			y;
 	float 			z;
 	int				r;
@@ -50,7 +51,7 @@ typedef struct		s_mlx
 
 typedef	struct		s_fdf
 {
-	t_map			*map;
+	t_map			*map_i;
 	t_map			*map_c;
 	t_map			*map_z;
 	t_mlx			*mlx;
@@ -62,17 +63,23 @@ void ft_init_points(char *s, t_line **l, int *y);
 void ft_init_coord(char *str, t_point **p, int *y, int *x);
 int ft_init_lines(t_line ***line, char *s, int fd);
 void ft_fdf_error(int id);
-void ft_count_center(t_mlx **mlx, t_map *map, t_map **map_c);
+void ft_count_center(t_mlx **mlx, t_map **map, t_map **map_c);
 void ft_get_window(t_fdf **fdf, int h, int w, char *s);
 void ft_put_image(t_fdf **fdf, int h, int w);
 int ft_key_hook(int key, t_fdf *fdf);
 void ft_draw_map_c(t_fdf **fdf);
-void ft_draw_line(t_point **p1, t_point **p2, t_map *m, t_mlx **mlx);
-void ft_draw_pixel(t_point **p2, t_map **mapm, t_mlx **mlx, int color);
+void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx);
+void ft_draw_pixel(t_point p2, t_map map, t_mlx **mlx, int color);
 
-void ft_map_zero(t_mlx **mlx, t_map *map, t_map **map_c);
-void ft_map_center(t_mlx **mlx, t_map *map, t_map **map_c);
-void ft_coord_update(t_point **center, t_map **map_X, t_map *map);
+void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c);
+void ft_map_center(t_mlx **mlx, t_map **map, t_map **map_c);
+void ft_coord_update(t_point **point_x, t_map **map_x, t_map **map);
+
+
+int	key_exit(void *p);
+
+
+
 //int ft_expose(t_fdf **fdf, int h, int w);
 
 
