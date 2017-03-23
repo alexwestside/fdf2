@@ -44,6 +44,7 @@ typedef struct		s_mlx
 	int				endian;
 	int				s_line;
 	t_point			*center;
+	t_point			*zero;
 	//int			len_line;
 }					t_mlx;
 
@@ -51,7 +52,7 @@ typedef	struct		s_fdf
 {
 	t_map			*map;
 	t_map			*map_c;
-	t_map			*map_up;
+	t_map			*map_z;
 	t_mlx			*mlx;
 }					t_fdf;
 
@@ -68,6 +69,10 @@ int ft_key_hook(int key, t_fdf *fdf);
 void ft_draw_map_c(t_fdf **fdf);
 void ft_draw_line(t_point **p1, t_point **p2, t_map *m, t_mlx **mlx);
 void ft_draw_pixel(t_point **p2, t_map **mapm, t_mlx **mlx, int color);
+
+void ft_map_zero(t_mlx **mlx, t_map *map, t_map **map_c);
+void ft_map_center(t_mlx **mlx, t_map *map, t_map **map_c);
+void ft_coord_update(t_point **center, t_map **map_X, t_map *map);
 //int ft_expose(t_fdf **fdf, int h, int w);
 
 
