@@ -13,8 +13,9 @@
 typedef struct		s_point
 {
 	float 			x;
-
+	float 			x1;
 	float 			y;
+	float 			y1;
 	float 			z;
 	int				r;
 	int				g;

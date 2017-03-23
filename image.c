@@ -13,7 +13,7 @@ void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 {
 	int i;
 
-	i = (((int)(p).x * 4) + ((int)(p).y * (*mlx)->s_line));
+	i = (((int)p.x * 4) + ((int)p.y * (*mlx)->s_line));
 	i < 0 ? i = -i : 0;
 	(*mlx)->img_str[i] = color;
 	(*mlx)->img_str[++i] = color >> 8;
@@ -35,10 +35,10 @@ void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 	error = 0;
 //	if(!ft_draw_out(p1) && !ft_draw_out(p2))
 //		return ;
-	dx = (int)fabsf((p1).x - (p2).x);
-	dy = (int)fabsf((p1).y - (p2).y);
-	sx = (p1).x < (p2).x ? 1 : -1;
-	sy = (p1).y < (p2).y ? 1 : -1;
+	dx = (int)fabsf(p1.x - p2.x);
+	dy = (int)fabsf(p1.y - p2.y);
+	sx = p1.x < p2.x ? 1 : -1;
+	sy = p1.y < p2.y ? 1 : -1;
 	ft_draw_pixel(p2, m, mlx, 0xFFFFFF);
 	while ((p1).x != (p2).x || (p1).y != (p2).y)
 	{
@@ -48,12 +48,12 @@ void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 		if (error > -dy)
 		{
 			error -= dy;
-			(p1).x += sx;
+			p1.x += sx;
 		}
 		if (error < dx)
 		{
 			error += dx;
-			(p1).y += sy;
+			p1.y += sy;
 		}
 	}
 }

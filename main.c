@@ -88,9 +88,7 @@ int main(int ac, char **av)
 	!(fdf = (t_fdf *)malloc(sizeof(t_fdf))) ? ft_fdf_error(2) : 0;
 	ft_parse_fdf(&fdf->map_i, av[1], 0);
 	ft_map_zero(&fdf->mlx, &fdf->map_i, &fdf->map_z, &fdf->map_c);
-	//ft_map_center(&fdf->mlx, fdf->map, &fdf->map_c);
 	ft_get_window(&fdf, W_HIGHT, W_WIDTH, "42 fdf");
-	//mlx_expose_hook(fdf->mlx->win, ft_expose, &fdf);
 	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	mlx_key_hook(fdf->mlx->win, ft_key_hook, fdf);
 	mlx_hook(fdf->mlx->win, 17, 0, key_exit, fdf);
