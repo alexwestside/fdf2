@@ -80,6 +80,12 @@ void ft_parse_fdf(t_map **map, char *s, int fd)
 	}
 }
 
+int	key_exit(void *p)
+{
+	(void)p;
+	exit (0);
+}
+
 int main(int ac, char **av)
 {
 	t_fdf *fdf;
@@ -93,5 +99,6 @@ int main(int ac, char **av)
 	//mlx_expose_hook(fdf->mlx->win, ft_expose, &fdf);
 	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	mlx_key_hook(fdf->mlx->win, ft_key_hook, fdf);
+	mlx_hook(fdf->mlx->win, 17, 0, key_exit, fdf);
 	mlx_loop(fdf->mlx->mlx);
 }

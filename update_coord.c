@@ -1,32 +1,33 @@
 
 #include "fdf2.h"
 
-void ft_coord_update(t_point **center, t_map **map_X, t_map *map)
+void ft_coord_update(t_point **point_x, t_map **map_x, t_map *map)
 {
-	int i = -1;
+	int i;
 	int j;
 
-	*map_X = (t_map *)malloc(sizeof(t_map));
-	(*map_X)->len = (*map).len;
-	(*map_X)->line = (t_line **)malloc(sizeof(t_line *) * (*map_X)->len + 1);
-	(*map_X)->line[(*map_X)->len] = NULL;
-	while (++i < (*map_X)->len)
+	i = -1;
+	*map_x = (t_map *)malloc(sizeof(t_map));
+	(*map_x)->len = (*map).len;
+	(*map_x)->line = (t_line **)malloc(sizeof(t_line *) * (*map_x)->len + 1);
+	(*map_x)->line[(*map_x)->len] = NULL;
+	while (++i < (*map_x)->len)
 	{
 		j = -1;
-		(*map_X)->line[i] = (t_line *)malloc(sizeof(t_line));
-		(*map_X)->line[i]->point = (t_point **)malloc(sizeof(t_point *) * (*(map)->line)->len);
-		(*map_X)->line[i]->len = (*map).line[i]->len;
-		while (++j < (*map_X)->line[i]->len)
+		(*map_x)->line[i] = (t_line *)malloc(sizeof(t_line));
+		(*map_x)->line[i]->point = (t_point **)malloc(sizeof(t_point *) * (*(map)->line)->len);
+		(*map_x)->line[i]->len = (*map).line[i]->len;
+		while (++j < (*map_x)->line[i]->len)
 		{
-			(*map_X)->line[i]->point[j] = (t_point *)malloc(sizeof(t_point));
-			(*map_X)->line[i]->point[j]->x = (*map).line[i]->point[j]->x + (*center)->x;
-			(*map_X)->line[i]->point[j]->y = (*map).line[i]->point[j]->y + (*center)->y;;
-			(*map_X)->line[i]->point[j]->z = (*map).line[i]->point[j]->z;
-			(*map_X)->line[i]->point[j]->r = (*map).line[i]->point[j]->r;
-			(*map_X)->line[i]->point[j]->g = (*map).line[i]->point[j]->g;
-			(*map_X)->line[i]->point[j]->b = (*map).line[i]->point[j]->b;
+			(*map_x)->line[i]->point[j] = (t_point *)malloc(sizeof(t_point));
+			(*map_x)->line[i]->point[j]->x = (*map).line[i]->point[j]->x + (*point_x)->x;
+			(*map_x)->line[i]->point[j]->y = (*map).line[i]->point[j]->y + (*point_x)->y;;
+			(*map_x)->line[i]->point[j]->z = (*map).line[i]->point[j]->z;
+			(*map_x)->line[i]->point[j]->r = (*map).line[i]->point[j]->r;
+			(*map_x)->line[i]->point[j]->g = (*map).line[i]->point[j]->g;
+			(*map_x)->line[i]->point[j]->b = (*map).line[i]->point[j]->b;
 		}
-		(*map_X)->line[i]->point[j] = NULL;
+		(*map_x)->line[i]->point[j] = NULL;
 	}
 }
 
@@ -35,8 +36,8 @@ void ft_map_center(t_mlx **mlx, t_map *map, t_map **map_c)
 	int x_len;
 	int y_len;
 
-	x_len = (*map->line)->len;
-	y_len = map->len;
+//	x_len = (*map->line)->len;
+//	y_len = map->len;
 	if (!((*mlx) = (t_mlx *)malloc(sizeof(t_mlx))))
 		ft_fdf_error(2);
 	(*mlx)->center = (t_point *)malloc(sizeof(t_point));

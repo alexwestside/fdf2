@@ -19,6 +19,12 @@ CMakeFiles/fdf2.dir/sub.c.o: ../libft/get_next_line.h
 CMakeFiles/fdf2.dir/sub.c.o: ../libft/libft.h
 CMakeFiles/fdf2.dir/sub.c.o: ../sub.c
 
+CMakeFiles/fdf2.dir/update_coord.c.o: ../fdf2.h
+CMakeFiles/fdf2.dir/update_coord.c.o: ../libft/ft_printf.h
+CMakeFiles/fdf2.dir/update_coord.c.o: ../libft/get_next_line.h
+CMakeFiles/fdf2.dir/update_coord.c.o: ../libft/libft.h
+CMakeFiles/fdf2.dir/update_coord.c.o: ../update_coord.c
+
 CMakeFiles/fdf2.dir/usage.c.o: ../fdf2.h
 CMakeFiles/fdf2.dir/usage.c.o: ../libft/ft_printf.h
 CMakeFiles/fdf2.dir/usage.c.o: ../libft/get_next_line.h
