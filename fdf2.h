@@ -13,9 +13,9 @@
 typedef struct		s_point
 {
 	float 			x;
-	float 			x1;
+	//float 			x1;
 	float 			y;
-	float 			y1;
+	//float 			y1;
 	float 			z;
 	int				r;
 	int				g;
@@ -74,7 +74,8 @@ void ft_draw_pixel(t_point p2, t_map map, t_mlx **mlx, int color);
 
 void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c);
 void ft_map_center(t_mlx **mlx, t_map **map, t_map **map_c);
-void ft_coord_update(t_point **point_x, t_map **map_x, t_map **map);
+void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **map_c);
+void ft_uprising_coord2(t_map **map_z, t_map **map_c, int n, int m);
 
 
 int	key_exit(void *p);

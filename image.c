@@ -1,9 +1,9 @@
 
 #include "fdf2.h"
 
-int ft_draw_out(t_point **p)
+int ft_draw_out(t_point p)
 {
-	if (((*p)->x > W_WIDTH || (*p)->x < 0) && ((*p)->y > W_HIGHT || (*p)->y < 0))
+	if (p.x > W_WIDTH - 10 || p.x <= 10 || p.y > W_HIGHT - 10 || p.y <= 10)
 		return (0);
 	else
 		return (1);
@@ -33,8 +33,8 @@ void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 	sx = 0;
 	dy = 0;
 	error = 0;
-//	if(!ft_draw_out(p1) && !ft_draw_out(p2))
-//		return ;
+	if(!ft_draw_out(p1) && !ft_draw_out(p2))
+		return ;
 	dx = (int)fabsf(p1.x - p2.x);
 	dy = (int)fabsf(p1.y - p2.y);
 	sx = p1.x < p2.x ? 1 : -1;
@@ -43,7 +43,6 @@ void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 	while ((p1).x != (p2).x || (p1).y != (p2).y)
 	{
 		ft_draw_pixel(p1, m, mlx, 0xFFFFFF);
-		//mlx_pixel_put((*mlx)->mlx, (*mlx)->win, (int) (*p1)->x, (int) (*p1)->y, 0xFFFFFF);
 		error = (dx - dy) * 2;
 		if (error > -dy)
 		{
