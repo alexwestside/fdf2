@@ -19,6 +19,12 @@ CMakeFiles/fdf2.dir/main.c.o: ../libft/get_next_line.h
 CMakeFiles/fdf2.dir/main.c.o: ../libft/libft.h
 CMakeFiles/fdf2.dir/main.c.o: ../main.c
 
+CMakeFiles/fdf2.dir/matrix_trans.c.o: ../fdf2.h
+CMakeFiles/fdf2.dir/matrix_trans.c.o: ../libft/ft_printf.h
+CMakeFiles/fdf2.dir/matrix_trans.c.o: ../libft/get_next_line.h
+CMakeFiles/fdf2.dir/matrix_trans.c.o: ../libft/libft.h
+CMakeFiles/fdf2.dir/matrix_trans.c.o: ../matrix_trans.c
+
 CMakeFiles/fdf2.dir/sub.c.o: ../fdf2.h
 CMakeFiles/fdf2.dir/sub.c.o: ../libft/ft_printf.h
 CMakeFiles/fdf2.dir/sub.c.o: ../libft/get_next_line.h

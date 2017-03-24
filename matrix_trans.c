@@ -47,7 +47,7 @@ void ft_turn_ordinata_y(t_map **map_z)
 {
 	float beta;
 
-	beta = (PI * BETA) / 180;
+	beta = (float)((PI * BETA) / 180);
 	int i;
 	int j;
 
