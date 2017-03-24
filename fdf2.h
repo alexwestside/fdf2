@@ -10,9 +10,9 @@
 # define W_HIGHT 800
 # define W_WIDTH 800
 # define PI 3.14
-# define ALPHA 48,5
-# define BETA 0
-#define GMAMA 315
+# define ALPHA 48.5
+# define BETA 0.0
+#define GAMMA 315.0
 
 typedef struct		s_point
 {
@@ -82,6 +82,8 @@ void ft_map_center(t_mlx **mlx, t_map **map, t_map **map_c);
 void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **map_c);
 //void ft_uprising_coord2(t_map **map_z, t_map **map_c, int n, int m);
 void ft_uprising_coord2(t_map **map_z, t_map **map_c, float *move);
+
+void ft_matrix_trance(t_map **map_z);
 
 
 int	key_exit(void *p);

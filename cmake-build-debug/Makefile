@@ -204,6 +204,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/main.c.s
 .PHONY : main.c.s
 
+matrix_trans.o: matrix_trans.c.o
+
+.PHONY : matrix_trans.o
+
+# target to build an object file
+matrix_trans.c.o:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/matrix_trans.c.o
+.PHONY : matrix_trans.c.o
+
+matrix_trans.i: matrix_trans.c.i
+
+.PHONY : matrix_trans.i
+
+# target to preprocess a source file
+matrix_trans.c.i:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/matrix_trans.c.i
+.PHONY : matrix_trans.c.i
+
+matrix_trans.s: matrix_trans.c.s
+
+.PHONY : matrix_trans.s
+
+# target to generate assembly for a file
+matrix_trans.c.s:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/matrix_trans.c.s
+.PHONY : matrix_trans.c.s
+
 sub.o: sub.c.o
 
 .PHONY : sub.o
@@ -303,6 +330,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... matrix_trans.o"
+	@echo "... matrix_trans.i"
+	@echo "... matrix_trans.s"
 	@echo "... sub.o"
 	@echo "... sub.i"
 	@echo "... sub.s"

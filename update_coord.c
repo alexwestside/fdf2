@@ -105,6 +105,7 @@ void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	(*mlx)->zero->g = 0;
 	(*mlx)->zero->b = 0;
 	ft_coord_update(&(*mlx)->zero, map_i, map_z, map_c);
+	ft_matrix_trance(map_z);
 	ft_uprising_coord(map_c, mlx);
 	//ft_map_center(mlx, map_z, map_c);
 }
