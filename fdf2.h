@@ -47,6 +47,7 @@ typedef struct		s_mlx
 	int				s_line;
 	t_point			*center;
 	t_point			*zero;
+	float			move[4];
 	//int			len_line;
 }					t_mlx;
 
@@ -67,7 +68,8 @@ void ft_fdf_error(int id);
 void ft_count_center(t_mlx **mlx, t_map **map, t_map **map_c);
 void ft_get_window(t_fdf **fdf, int h, int w, char *s);
 void ft_put_image(t_fdf **fdf, int h, int w);
-int ft_key_hook(int key, t_fdf *fdf);
+//int ft_key_hook(int key, t_fdf *fdf);
+int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx);
 void ft_draw_map_c(t_fdf **fdf);
 void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx);
 void ft_draw_pixel(t_point p2, t_map map, t_mlx **mlx, int color);
@@ -75,7 +77,8 @@ void ft_draw_pixel(t_point p2, t_map map, t_mlx **mlx, int color);
 void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c);
 void ft_map_center(t_mlx **mlx, t_map **map, t_map **map_c);
 void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **map_c);
-void ft_uprising_coord2(t_map **map_z, t_map **map_c, int n, int m);
+//void ft_uprising_coord2(t_map **map_z, t_map **map_c, int n, int m);
+void ft_uprising_coord2(t_map **map_z, t_map **map_c, float *move);
 
 
 int	key_exit(void *p);

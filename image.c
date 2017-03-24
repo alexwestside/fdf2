@@ -3,7 +3,8 @@
 
 int ft_draw_out(t_point p)
 {
-	if (p.x > W_WIDTH - 10 || p.x <= 10 || p.y > W_HIGHT - 10 || p.y <= 10)
+	//if (p.x > W_WIDTH + 10 || p.x <= 10 || p.y > W_HIGHT - 10 || p.y <= 10)
+	if (p.x > W_WIDTH + 10 || p.x < 0/* || p.y > W_HIGHT - 10 || p.y <= 10*/)
 		return (0);
 	else
 		return (1);
@@ -15,32 +16,30 @@ void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 
 	i = (((int)p.x * 4) + ((int)p.y * (*mlx)->s_line));
 	i < 0 ? i = -i : 0;
-	(*mlx)->img_str[i] = color;
-	(*mlx)->img_str[++i] = color >> 8;
-	(*mlx)->img_str[++i] = color >> 16;
+	if (i >= 0 && i < W_WIDTH * 4 * W_HIGHT && p.x > 0 && p.x < W_WIDTH - 1 && p.y > 0/* || p.y <= 10*/)
+	{
+		(*mlx)->img_str[i] = color;
+		(*mlx)->img_str[++i] = color >> 8;
+		(*mlx)->img_str[++i] = color >> 16;
+	}
 }
 
 void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 {
-	int dx;
-	int dy;
-	int sx;
-	int sy;
-	int error;
+	float dx;
+	float dy;
+	float sx;
+	float sy;
+	float error;
 
-	dx = 0;
-	dy = 0;
-	sx = 0;
-	dy = 0;
-	error = 0;
-	if(!ft_draw_out(p1) && !ft_draw_out(p2))
-		return ;
-	dx = (int)fabsf(p1.x - p2.x);
-	dy = (int)fabsf(p1.y - p2.y);
+//	if(!ft_draw_out(p1) && !ft_draw_out(p2))
+//		return ;
+	dx = (float)fabsf(p1.x - p2.x);
+	dy = (float)fabsf(p1.y - p2.y);
 	sx = p1.x < p2.x ? 1 : -1;
 	sy = p1.y < p2.y ? 1 : -1;
 	ft_draw_pixel(p2, m, mlx, 0xFFFFFF);
-	while ((p1).x != (p2).x || (p1).y != (p2).y)
+	while ((int)p1.x != (int)p2.x || (int)p1.y != (int)p2.y)
 	{
 		ft_draw_pixel(p1, m, mlx, 0xFFFFFF);
 		error = (dx - dy) * 2;
