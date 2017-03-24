@@ -1,8 +1,6 @@
 
 #include "fdf2.h"
 
-
-//void ft_uprising_coord2(t_map **map_z, t_map **map_c, int n, int m)
 void ft_uprising_coord2(t_map **map_z, t_map **map_c, float *move)
 {
 	int i;
@@ -10,22 +8,16 @@ void ft_uprising_coord2(t_map **map_z, t_map **map_c, float *move)
 	float p;
 
 	i = -1;
-//	if (move[2])
-//		p = (*map_z)->len > (*(*map_z)->line)->len ? (W_HIGHT - 100) / (*map_z)->len : (W_HIGHT - 100) / (*(*map_z)->line)->len;
-//	else
-		p = (*map_z)->len > (*(*map_z)->line)->len ? (W_HIGHT - 100) / (*map_z)->len : (W_HIGHT - 100) / (*(*map_z)->line)->len;
+	p = (*map_z)->len > (*(*map_z)->line)->len ? (W_HIGHT - 100) / (*map_z)->len : (W_HIGHT - 100) / (*(*map_z)->line)->len;
 	while (++i < (*map_z)->len)
 	{
-		//p = p + move[2];
 		j = -1;
 		while (++j < (*map_z)->line[i]->len)
 		{
 			(*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x + move[0];
 			(*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y + move[1];
-
 			move[2] ? (*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x * move[2] : 0;
 			move[2] ? (*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y * move[2] : 0;
-
 			(*map_c)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x * p + W_WIDTH / 2;
 			(*map_c)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y * p + W_HIGHT / 2;
 		}

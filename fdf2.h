@@ -5,10 +5,14 @@
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
 # include "libft/get_next_line.h"
-#include <mlx.h>
+# include <mlx.h>
 # include <math.h>
-#define W_HIGHT 800
-#define W_WIDTH 800
+# define W_HIGHT 800
+# define W_WIDTH 800
+# define PI 3.14
+# define ALPHA 48,5
+# define BETA 0
+#define GMAMA 315
 
 typedef struct		s_point
 {
@@ -48,7 +52,6 @@ typedef struct		s_mlx
 	t_point			*center;
 	t_point			*zero;
 	float			move[4];
-	//int			len_line;
 }					t_mlx;
 
 typedef	struct		s_fdf
