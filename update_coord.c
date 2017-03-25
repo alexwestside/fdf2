@@ -51,24 +51,6 @@ void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **ma
 	}
 }
 
-void ft_map_center(t_mlx **mlx, t_map **map_z, t_map **map_c)
-{
-	int x_len;
-	int y_len;
-
-//	if (!((*mlx) = (t_mlx *)malloc(sizeof(t_mlx))))
-//		ft_fdf_error(2);
-	(*mlx)->center = (t_point *)malloc(sizeof(t_point));
-	(*mlx)->center->x = W_WIDTH / 2;
-	(*mlx)->center->y = W_HIGHT / 2;
-	(*mlx)->center->z = 0;
-	(*mlx)->center->r = 0;
-	(*mlx)->center->g = 0;
-	(*mlx)->center->b = 0;
-	//ft_coord_update(&(*mlx)->center, map_c, map_z);
-}
-
-
 void ft_uprising_coord(t_map **map_c, t_mlx **mlx)
 {
 	int p;
@@ -76,7 +58,7 @@ void ft_uprising_coord(t_map **map_c, t_mlx **mlx)
 	int j;
 
 	i = -1;
-	p = (*map_c)->len > (*(*map_c)->line)->len ? (W_HIGHT - 100) / (*map_c)->len : (W_HIGHT - 100) / (*(*map_c)->line)->len;
+	p = (*map_c)->len > (*(*map_c)->line)->len ? (W_HIGHT - 50) / (*map_c)->len : (W_HIGHT - 250) / (*(*map_c)->line)->len;
 	while (++i < (*map_c)->len)
 	{
 		j = -1;
@@ -107,5 +89,5 @@ void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	ft_coord_update(&(*mlx)->zero, map_i, map_z, map_c);
 	ft_matrix_trans(map_c);
 	ft_uprising_coord(map_c, mlx);
-	//ft_map_center(mlx, map_z, map_c);
+
 }

@@ -82,7 +82,7 @@ void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **ma
 //void ft_uprising_coord2(t_map **map_z, t_map **map_c, int n, int m);
 void ft_uprising_coord2(t_map **map_z, t_map **map_c, float *move);
 
-void ft_matrix_trans(t_map **map_z);
+void ft_matrix_trans(t_map **map_c);
 
 
 int	key_exit(void *p);
