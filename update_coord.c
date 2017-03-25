@@ -14,18 +14,18 @@ void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **ma
 
 	*map_c = (t_map *)malloc(sizeof(t_map));
 	(*map_c)->len = (*map_i)->len;
-	(*map_c)->line = (t_line **)malloc(sizeof(t_line *) * (*map_z)->len + 1);
-	(*map_c)->line[(*map_z)->len] = NULL;
+	(*map_c)->line = (t_line **)malloc(sizeof(t_line *) * (*map_c)->len + 1);
+	(*map_c)->line[(*map_c)->len] = NULL;
 
 	while (++i < (*map_z)->len)
 	{
 		j = -1;
 		(*map_z)->line[i] = (t_line *)malloc(sizeof(t_line));
-		(*map_z)->line[i]->point = (t_point **)malloc(sizeof(t_point *) * (*(*map_i)->line)->len);
+		(*map_z)->line[i]->point = (t_point **)malloc(sizeof(t_point *) * (*(*map_i)->line)->len + 1);
 		(*map_z)->line[i]->len = (*map_i)->line[i]->len;
 
 		(*map_c)->line[i] = (t_line *)malloc(sizeof(t_line));
-		(*map_c)->line[i]->point = (t_point **)malloc(sizeof(t_point *) * (*(*map_i)->line)->len);
+		(*map_c)->line[i]->point = (t_point **)malloc(sizeof(t_point *) * (*(*map_i)->line)->len + 1);
 		(*map_c)->line[i]->len = (*map_i)->line[i]->len;
 
 		while (++j < (*map_z)->line[i]->len)
