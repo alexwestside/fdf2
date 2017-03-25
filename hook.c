@@ -70,6 +70,7 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 		(*mlx).move[1] = 1;
 		(*mlx).move[2] = 0;
 		(*mlx).move[3] = 0;
+		ft_matrix_trans(&fdf->map_c);
 		ft_uprising_coord2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}

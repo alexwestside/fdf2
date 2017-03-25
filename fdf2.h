@@ -9,10 +9,9 @@
 # include <math.h>
 # define W_HIGHT 800
 # define W_WIDTH 800
-# define PI 3.14
 # define ALPHA 48.5
 # define BETA 0.0
-#define GAMMA 315.0
+# define GAMMA 315.0
 
 typedef struct		s_point
 {
