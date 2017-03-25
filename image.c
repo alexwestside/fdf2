@@ -3,12 +3,13 @@
 
 int ft_draw_out(t_point p)
 {
-	//if (p.x > W_WIDTH + 10 || p.x <= 10 || p.y > W_HIGHT - 10 || p.y <= 10)
-	if (p.x > W_WIDTH + 10 || p.x < 0/* || p.y > W_HIGHT - 10 || p.y <= 10*/)
+	if (p.x > W_WIDTH || p.x < 0/* || p.y > W_HIGHT - 10 || p.y <= 10*/)
 		return (0);
 	else
 		return (1);
 }
+
+
 
 void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 {
@@ -26,21 +27,13 @@ void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 
 void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 {
-//	const int dx;
-//	const int dy;
-//	const int sx;
-//	const int sy;
-//	const int error;
-
-//	if(!ft_draw_out(p1) && !ft_draw_out(p2))
-//		return ;
 	const int dx = (int)fabsf((int)p1.x - (int)p2.x);
 	const int dy = (int)fabsf((int)p1.y - (int)p2.y);
 	const int sx = p1.x < (int)p2.x ? 1 : -1;
 	const int sy = p1.y < (int)p2.y ? 1 : -1;
 	int error = dx - dy;
 	ft_draw_pixel(p2, m, mlx, 0xFFFFFF);
-	while (((int)p1.x != (int)p2.x|| (int)p1.y != (int)p2.y)/* && ((int)p1.x > 0 && (int)p1.y < W_HIGHT && (int)p1.x < W_WIDTH && (int)p1.y > 0)*/)
+	while (((int)p1.x != (int)p2.x|| (int)p1.y != (int)p2.y) && ((int)p1.x > 0 && (int)p1.y < W_HIGHT && (int)p1.x < W_WIDTH && (int)p1.y > 0))
 	{
 		ft_draw_pixel(p1, m, mlx, 0xFFFFFF);
 		const int error2 = error * 2;
