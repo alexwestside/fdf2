@@ -16,7 +16,7 @@ void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 
 	i = (((int)p.x * 4) + ((int)p.y * (*mlx)->s_line));
 	i < 0 ? i = -i : 0;
-	if (i >= 0 && i < W_WIDTH * 4 * W_HIGHT && p.x > 0 && p.x < W_WIDTH - 1 && p.y > 0/* || p.y <= 10*/)
+	if (i >= 0 && i < W_WIDTH * 4 * W_HIGHT/* && p.x > 0 && p.x < W_WIDTH - 1 && p.y > 0*/)
 	{
 		(*mlx)->img_str[i] = color;
 		(*mlx)->img_str[++i] = color >> 8;
@@ -26,33 +26,35 @@ void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 
 void ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 {
-	float dx;
-	float dy;
-	float sx;
-	float sy;
-	float error;
+//	const int dx;
+//	const int dy;
+//	const int sx;
+//	const int sy;
+//	const int error;
 
 //	if(!ft_draw_out(p1) && !ft_draw_out(p2))
 //		return ;
-	dx = (float)fabsf(p1.x - p2.x);
-	dy = (float)fabsf(p1.y - p2.y);
-	sx = p1.x < p2.x ? 1 : -1;
-	sy = p1.y < p2.y ? 1 : -1;
+	const float dx = fabsf((int)p1.x - (int)p2.x);
+	const float dy = fabsf((int)p1.y - (int)p2.y);
+	const float sx = (int)p1.x < (int)p2.x ? 1 : -1;
+	const float sy = (int)p1.y < (int)p2.y ? 1 : -1;
+	float error = dx - dy;
 	ft_draw_pixel(p2, m, mlx, 0xFFFFFF);
-	while ((int)p1.x != (int)p2.x || (int)p1.y != (int)p2.y)
+	while (((int)p1.x != (int)p2.x || (int)p1.y != (int)p2.y) && ((int)p1.x > 0 && (int)p1.y < W_HIGHT && (int)p1.x < W_HIGHT && (int)p1.y > 0))
 	{
 		ft_draw_pixel(p1, m, mlx, 0xFFFFFF);
-		error = (dx - dy) * 2;
-		if (error > -dy)
+		const float error2 = error * 2;
+		if (error2 > -dy)
 		{
 			error -= dy;
 			p1.x += sx;
 		}
-		if (error < dx)
+		if (error2 < dx)
 		{
 			error += dx;
 			p1.y += sy;
 		}
+		ft_printf("ok\n");
 	}
 }
 

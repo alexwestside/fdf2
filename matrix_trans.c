@@ -64,7 +64,7 @@ void ft_turn_ordinata_y(t_map **map_z)
 	}
 }
 
-void ft_matrix_trance(t_map **map_z)
+void ft_matrix_trans(t_map **map_z)
 {
 	ft_turn_aplicate_z(map_z);
 	ft_turn_abscissa_x(map_z);
