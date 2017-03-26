@@ -66,6 +66,7 @@ void ft_uprising_coord(t_map **map_c, t_mlx **mlx)
 		{
 			(*map_c)->line[i]->point[j]->x = (*map_c)->line[i]->point[j]->x * p + W_WIDTH / 2;
 			(*map_c)->line[i]->point[j]->y = (*map_c)->line[i]->point[j]->y * p + W_HIGHT / 2;
+			//(*map_c)->line[i]->point[j]->z = 0;
 		}
 	}
 }
