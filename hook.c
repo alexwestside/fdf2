@@ -16,7 +16,6 @@ void ft_uprising_coord_2(t_map **map_z, t_map **map_c, float *move)
 		{
 			(*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x + move[0];
 			(*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y + move[1];
-
 			move[2] ? (*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x * move[2] : 0;
 			move[2] ? (*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y * move[2] : 0;
 			move[2] ? (*map_z)->line[i]->point[j]->z = (*map_z)->line[i]->point[j]->z * move[2] : 0;
