@@ -57,7 +57,7 @@ typedef struct		s_mlx
 	int				s_line;
 	t_point			*center;
 	t_point			*zero;
-	float			move[4];
+	float			move[5];
 	t_angle			*angle;
 }					t_mlx;
 

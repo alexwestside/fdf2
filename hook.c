@@ -80,75 +80,119 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	if (key == 124)
 	{
 		(*mlx).move[0] = 1.5;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 123)
 	{
 		(*mlx).move[0] = -1;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 126)
 	{
 		(*mlx).move[1] = -1;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 125)
 	{
 		(*mlx).move[1] = 1;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 78)
 	{
 		(*mlx).move[2] = 0.91;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 69)
 	{
 		(*mlx).move[2] = 1.09;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 89)
 	{
 		(*mlx).move[3] = 5.0;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 3, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 3, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 91)
 	{
 		(*mlx).move[3] = 5.0;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 4, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 4, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 92)
 	{
 		(*mlx).move[3] = 5.0;
-		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 5, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 5, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
+	if (key == 86)
+	{
+		(*mlx).move[3] = -5.0f;
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 3, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 87)
+	{
+		(*mlx).move[3] = -5.0f;
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 4, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 88)
+	{
+		(*mlx).move[3] = -5.0f;
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 5, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+//	if (key == 116)
+//	{
+//		(*mlx).move[4] = 1.0;
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 6, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
+//	if (key == 121)
+//	{
+//		(*mlx).move[4] = -1.0f;
+//		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 6, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
+	ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+	ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 5, mlx->move);
+	ft_uprising_coord_3(&fdf->map_c);
+	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	return (1);
 }
 

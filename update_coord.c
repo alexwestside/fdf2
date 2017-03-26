@@ -80,6 +80,7 @@ void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	if (!((*mlx) = (t_mlx *)malloc(sizeof(t_mlx))))
 		ft_fdf_error(2);
 	ft_init_angle(&(*mlx)->angle);
+	ft_bzero((*mlx)->move, sizeof(float));
 	(*mlx)->zero = (t_point *)malloc(sizeof(t_point));
 	(*mlx)->zero->x = ((*map_i)->line[y_len - 1]->point[x_len - 1]->x - (*map_i)->line[0]->point[0]->x) / 2;
 	(*mlx)->zero->y = ((*map_i)->line[y_len - 1]->point[x_len - 1]->y - (*map_i)->line[0]->point[0]->y) / 2;
