@@ -9,7 +9,7 @@ void ft_uprising_coord_2(t_map **map_z, t_map **map_c, float *move)
 	float p;
 
 	i = -1;
-	p = (*map_z)->len > (*(*map_z)->line)->len ? (W_HIGHT - 100) / (*map_z)->len : (W_HIGHT - 100) / (*(*map_z)->line)->len;
+//	p = (*map_z)->len > (*(*map_z)->line)->len ? (W_HIGHT - 50) / (*map_z)->len : (W_HIGHT - 250) / (*(*map_z)->line)->len;
 	while (++i < (*map_z)->len)
 	{
 		j = -1;
@@ -20,11 +20,15 @@ void ft_uprising_coord_2(t_map **map_z, t_map **map_c, float *move)
 
 			move[2] ? (*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x * move[2] : 0;
 			move[2] ? (*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y * move[2] : 0;
+
+//			(*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x + W_WIDTH / 2;
+//			(*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y + W_HIGHT / 2;
+
 		}
 	}
 }
 
-void ft_matrix_trans_2(t_map **map_z, t_map **map_c)
+void ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, float *move)
 {
 	int p;
 	int i;
@@ -41,7 +45,7 @@ void ft_matrix_trans_2(t_map **map_z, t_map **map_c)
 			(*map_c)->line[i]->point[j]->z = (*map_z)->line[i]->point[j]->z;
 		}
 	}
-	ft_matrix_trans(map_c);
+	ft_matrix_trans(angle, map_c, id, move);
 }
 
 int	key_exit(void *p)
@@ -72,6 +76,7 @@ void ft_uprising_coord_3(t_map **map_c)
 
 int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 {
+	ft_bzero((*mlx).move, sizeof(float));
 	if (key == 53)
 	{
 		mlx_destroy_window((*fdf->mlx).mlx, (*fdf->mlx).win);
@@ -80,66 +85,84 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	if (key == 124)
 	{
 		(*mlx).move[0] = 1.5;
-		(*mlx).move[1] = 0;
-		(*mlx).move[2] = 0;
-		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->map_z, &fdf->map_c);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 123)
 	{
 		(*mlx).move[0] = -1;
-		(*mlx).move[1] = 0;
-		(*mlx).move[2] = 0;
-		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->map_z, &fdf->map_c);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 126)
 	{
-		(*mlx).move[0] = 0;
+//		(*mlx).move[0] = 0;
 		(*mlx).move[1] = -1;
-		(*mlx).move[2] = 0;
-		(*mlx).move[3] = 0;
+//		(*mlx).move[2] = 0;
+//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->map_z, &fdf->map_c);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 125)
 	{
-		(*mlx).move[0] = 0;
+//		(*mlx).move[0] = 0;
 		(*mlx).move[1] = 1;
-		(*mlx).move[2] = 0;
-		(*mlx).move[3] = 0;
+//		(*mlx).move[2] = 0;
+//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->map_z, &fdf->map_c);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 78)
 	{
-		(*mlx).move[0] = 0;
-		(*mlx).move[1] = 0;
+//		(*mlx).move[0] = 0;
+//		(*mlx).move[1] = 0;
 		(*mlx).move[2] = 0.91;
-		(*mlx).move[3] = 0;
+//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->map_z, &fdf->map_c);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 69)
 	{
-		(*mlx).move[0] = 0;
-		(*mlx).move[1] = 0;
+//		(*mlx).move[0] = 0;
+//		(*mlx).move[1] = 0;
 		(*mlx).move[2] = 1.09;
-		(*mlx).move[3] = 0;
+//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->map_z, &fdf->map_c);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+		ft_uprising_coord_3(&fdf->map_c);
+		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 89)
+	{
+		(*mlx).move[3] = 5.0;
+		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 3, mlx->move);
+		ft_uprising_coord_3(&fdf->map_c);
+		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 91)
+	{
+		(*mlx).move[3] = 5.0;
+		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 4, mlx->move);
+		ft_uprising_coord_3(&fdf->map_c);
+		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 92)
+	{
+		(*mlx).move[3] = 5.0;
+		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 5, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}

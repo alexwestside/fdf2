@@ -9,9 +9,16 @@
 # include <math.h>
 # define W_HIGHT 800
 # define W_WIDTH 800
-# define ALPHA 48.5
-# define BETA 0.0
-# define GAMMA 315.0
+//# define ALPHA 48.5
+//# define BETA 0.0
+//# define GAMMA 315.0
+
+typedef struct 		s_angle
+{
+	float alpha;
+	float beta;
+	float gamma;
+}					t_angle;
 
 typedef struct		s_point
 {
@@ -51,6 +58,7 @@ typedef struct		s_mlx
 	t_point			*center;
 	t_point			*zero;
 	float			move[4];
+	t_angle			*angle;
 }					t_mlx;
 
 typedef	struct		s_fdf
@@ -82,8 +90,11 @@ void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **ma
 //void ft_uprising_coord2(t_map **map_z, t_map **map_c, int n, int m);
 void ft_uprising_coord2(t_map **map_z, t_map **map_c, float *move);
 
-void ft_matrix_trans(t_map **map_c);
+//void ft_matrix_trans(t_map **map_c);
+void ft_matrix_trans(t_angle **angle, t_map **map_c, int id, float *move);
+void ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, float *move);
 
+void ft_init_angle(t_angle **angle);
 
 int	key_exit(void *p);
 

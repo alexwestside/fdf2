@@ -1,11 +1,11 @@
 
 #include "fdf2.h"
 
-void ft_turn_aplicate_z(t_map **map_c)
+void ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move)
 {
 	float gamma;
 
-	gamma = (float)((M_PI * GAMMA) / 180);
+	gamma = (float)((M_PI * ((*angle)->gamma + (id == 3 ? move[3] : 0.0))) / 180);
 	int i;
 	int j;
 
@@ -21,11 +21,11 @@ void ft_turn_aplicate_z(t_map **map_c)
 	}
 }
 
-void ft_turn_abscissa_x(t_map **map_c)
+void ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move)
 {
 	float alpha;
 
-	alpha = (float)((M_PI * ALPHA) / 180);
+	alpha = (float)((M_PI * ((*angle)->alpha + (id == 4 ? move[3] : 0))) / 180);
 	int i;
 	int j;
 
@@ -41,11 +41,11 @@ void ft_turn_abscissa_x(t_map **map_c)
 	}
 }
 
-void ft_turn_ordinata_y(t_map **map_c)
+void ft_turn_ordinata_y(t_angle **angle, t_map **map_c, int id, float *move)
 {
 	float beta;
 
-	beta = (float)((M_PI * BETA) / 180);
+	beta = (float)((M_PI * ((*angle)->beta + (id == 5 ? move[3] : 0))) / 180);
 	int i;
 	int j;
 
@@ -61,9 +61,9 @@ void ft_turn_ordinata_y(t_map **map_c)
 	}
 }
 
-void ft_matrix_trans(t_map **map_c)
+void ft_matrix_trans(t_angle **angle, t_map **map_c, int id, float *move)
 {
-	ft_turn_aplicate_z(map_c);
-	ft_turn_abscissa_x(map_c);
-	ft_turn_ordinata_y(map_c);
+	ft_turn_aplicate_z(angle, map_c, id, move);
+	ft_turn_abscissa_x(angle, map_c, id, move);
+	ft_turn_ordinata_y(angle, map_c, id, move);
 }
