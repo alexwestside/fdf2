@@ -9,7 +9,6 @@ void ft_uprising_coord_2(t_map **map_z, t_map **map_c, float *move)
 	float p;
 
 	i = -1;
-//	p = (*map_z)->len > (*(*map_z)->line)->len ? (W_HIGHT - 50) / (*map_z)->len : (W_HIGHT - 250) / (*(*map_z)->line)->len;
 	while (++i < (*map_z)->len)
 	{
 		j = -1;
@@ -20,10 +19,6 @@ void ft_uprising_coord_2(t_map **map_z, t_map **map_c, float *move)
 
 			move[2] ? (*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x * move[2] : 0;
 			move[2] ? (*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y * move[2] : 0;
-
-//			(*map_z)->line[i]->point[j]->x = (*map_z)->line[i]->point[j]->x + W_WIDTH / 2;
-//			(*map_z)->line[i]->point[j]->y = (*map_z)->line[i]->point[j]->y + W_HIGHT / 2;
-
 		}
 	}
 }
@@ -100,10 +95,7 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 126)
 	{
-//		(*mlx).move[0] = 0;
 		(*mlx).move[1] = -1;
-//		(*mlx).move[2] = 0;
-//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
@@ -111,10 +103,7 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 125)
 	{
-//		(*mlx).move[0] = 0;
 		(*mlx).move[1] = 1;
-//		(*mlx).move[2] = 0;
-//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
@@ -122,10 +111,7 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 78)
 	{
-//		(*mlx).move[0] = 0;
-//		(*mlx).move[1] = 0;
 		(*mlx).move[2] = 0.91;
-//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
@@ -133,10 +119,7 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 69)
 	{
-//		(*mlx).move[0] = 0;
-//		(*mlx).move[1] = 0;
 		(*mlx).move[2] = 1.09;
-//		(*mlx).move[3] = 0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
