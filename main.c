@@ -91,6 +91,7 @@ int main(int ac, char **av)
 	ft_get_window(&fdf, W_HIGHT, W_WIDTH, "42 fdf");
 	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	mlx_hook(fdf->mlx->win, 2, 5, ft_key_hook, fdf);
+//	ft_bzero(fdf->mlx->move, sizeof(float));
 	mlx_hook(fdf->mlx->win, 17, 0, key_exit, fdf);
 	mlx_loop(fdf->mlx->mlx);
 }

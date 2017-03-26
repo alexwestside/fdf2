@@ -80,7 +80,8 @@ void ft_uprising_coord_3(t_map **map_c)
 
 int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 {
-	ft_bzero((*mlx).move, sizeof(float));
+	if (key == 53 || key == 124 || key == 123 || key == 126 || key == 125 || key == 78 || key == 69 || key == 89 || key == 91 || key == 92 || key == 86 || key == 87 || key == 88 || key == 116 || key == 121)
+		ft_bzero((*mlx).move, sizeof(float));
 	if (key == 53)
 	{
 		mlx_destroy_window((*fdf->mlx).mlx, (*fdf->mlx).win);
@@ -198,6 +199,6 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
-	return (1);
+	return (0);
 }
 
