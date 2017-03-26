@@ -76,3 +76,4 @@ void ft_matrix_trans(t_angle **angle, t_map **map_c, int id, float *move)
 	ft_turn_abscissa_x(angle, map_c, id, move);
 	ft_turn_ordinata_y(angle, map_c, id, move);
 }
+
