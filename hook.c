@@ -161,25 +161,28 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 86)
 	{
-		(*mlx).move[3] = -5.0f;
+		//(*mlx).move[3] = -5.0f;
+		(*mlx).move[3] = 5.0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 3, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 8, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 87)
 	{
-		(*mlx).move[3] = -5.0f;
+		//(*mlx).move[3] = -5.0f;
+		(*mlx).move[3] = 5.0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 4, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 9, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	if (key == 88)
 	{
-		(*mlx).move[3] = -5.0f;
+		//(*mlx).move[3] = -5.0f;
+		(*mlx).move[3] = 5.0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 5, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 10, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
@@ -193,7 +196,7 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 121)
 	{
-		(*mlx).move[4] = 1.1f;
+		(*mlx).move[4] = 1.1;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 7, mlx->move);
 		ft_uprising_coord_3(&fdf->map_c);

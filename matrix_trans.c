@@ -5,7 +5,9 @@ void ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move)
 {
 	float gamma;
 
-	(*angle)->gamma = (*angle)->gamma + (id == 3 ? move[3] : 0);
+//	(*angle)->gamma = (*angle)->gamma + (id == 3 ? move[3] : 0);
+	id == 3 ? (*angle)->gamma = (*angle)->gamma + move[3] : 0;
+	id == 8 ? (*angle)->gamma = (*angle)->gamma - move[3] : 0;
 	gamma = (float)((M_PI * ((*angle)->gamma)) / 180);
 	int i;
 	int j;
@@ -26,7 +28,9 @@ void ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move)
 {
 	float alpha;
 
-	(*angle)->alpha = (*angle)->alpha + (id == 4 ? move[3] : 0);
+//	(*angle)->alpha = (*angle)->alpha + (id == 4 ? move[3] : 0);
+	id == 4 ? (*angle)->alpha = (*angle)->alpha + move[3] : 0;
+	id == 9 ? (*angle)->alpha = (*angle)->alpha - move[3] : 0;
 	alpha = (float)((M_PI * ((*angle)->alpha)) / 180);
 	int i;
 	int j;
@@ -41,14 +45,15 @@ void ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move)
 			(*map_c)->line[i]->point[j]->z = -(*map_c)->line[i]->point[j]->y * sinf(alpha) + (*map_c)->line[i]->point[j]->z * cosf(alpha);
 		}
 	}
-	ft_printf("%", (*angle)->alpha);
 }
 
 void ft_turn_ordinata_y(t_angle **angle, t_map **map_c, int id, float *move)
 {
 	float beta;
 
-	(*angle)->beta = (*angle)->beta + (id == 5 ? move[3] : 0);
+//	(*angle)->beta = (*angle)->beta + (id == 5 ? move[3] : 0);
+	id == 5 ? (*angle)->beta = (*angle)->beta + move[3] : 0;
+	id == 10 ? (*angle)->beta = (*angle)->beta - move[3] : 0;
 	beta = (float)((M_PI * ((*angle)->beta)) / 180);
 	int i;
 	int j;

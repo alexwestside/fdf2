@@ -17,11 +17,15 @@ int ft_init_lines(t_line ***line, char *s, int fd)
 	close(fd);
 	if (!(*line = (t_line **)malloc(sizeof(t_line *) * (cl + 1))))
 		ft_fdf_error(2);
+	if (cl == 0)
+		return (1);
 	return (cl);
+
 }
 
 void ft_init_coord(char *str, t_point **p, int *y, int *x)
 {
+	//ft_check_fdf(str);
 	if (!(*p = (t_point *) malloc(sizeof(t_point))))
 		ft_fdf_error(2);
 	(*p)->x = *x;
@@ -78,6 +82,8 @@ void ft_parse_fdf(t_map **map, char *s, int fd)
 		y++;
 		l++;
 	}
+	if (y == 0)
+		ft_fdf_error(3);
 }
 
 int main(int ac, char **av)
@@ -87,11 +93,11 @@ int main(int ac, char **av)
 		ft_fdf_error(1);
 	!(fdf = (t_fdf *)malloc(sizeof(t_fdf))) ? ft_fdf_error(2) : 0;
 	ft_parse_fdf(&fdf->map_i, av[1], 0);
+	ft_check_fdf(fdf->map_i);
 	ft_map_zero(&fdf->mlx, &fdf->map_i, &fdf->map_z, &fdf->map_c);
 	ft_get_window(&fdf, W_HIGHT, W_WIDTH, "42 fdf");
 	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	mlx_hook(fdf->mlx->win, 2, 5, ft_key_hook, fdf);
-//	ft_bzero(fdf->mlx->move, sizeof(float));
 	mlx_hook(fdf->mlx->win, 17, 0, key_exit, fdf);
 	mlx_loop(fdf->mlx->mlx);
 }

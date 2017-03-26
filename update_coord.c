@@ -66,7 +66,6 @@ void ft_uprising_coord(t_map **map_c, t_mlx **mlx)
 		{
 			(*map_c)->line[i]->point[j]->x = (*map_c)->line[i]->point[j]->x * p + W_WIDTH / 2;
 			(*map_c)->line[i]->point[j]->y = (*map_c)->line[i]->point[j]->y * p + W_HIGHT / 2;
-			//(*map_c)->line[i]->point[j]->z = 0;
 		}
 	}
 }
@@ -81,7 +80,6 @@ void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	if (!((*mlx) = (t_mlx *)malloc(sizeof(t_mlx))))
 		ft_fdf_error(2);
 	ft_init_angle(&(*mlx)->angle);
-	//ft_bzero((*mlx)->move, sizeof(float));
 	(*mlx)->zero = (t_point *)malloc(sizeof(t_point));
 	(*mlx)->zero->x = ((*map_i)->line[y_len - 1]->point[x_len - 1]->x - (*map_i)->line[0]->point[0]->x) / 2;
 	(*mlx)->zero->y = ((*map_i)->line[y_len - 1]->point[x_len - 1]->y - (*map_i)->line[0]->point[0]->y) / 2;
@@ -89,6 +87,7 @@ void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	(*mlx)->zero->r = 0;
 	(*mlx)->zero->g = 0;
 	(*mlx)->zero->b = 0;
+	ft_coord_update(&(*mlx)->zero, map_i, map_z, map_c);
 	ft_coord_update(&(*mlx)->zero, map_i, map_z, map_c);
 	ft_matrix_trans(&(*mlx)->angle, map_c, 0, (*mlx)->move);
 	ft_uprising_coord(map_c, mlx);
