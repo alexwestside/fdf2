@@ -161,7 +161,6 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 86)
 	{
-		//(*mlx).move[3] = -5.0f;
 		(*mlx).move[3] = 5.0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 8, mlx->move);
@@ -170,7 +169,6 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 87)
 	{
-		//(*mlx).move[3] = -5.0f;
 		(*mlx).move[3] = 5.0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 9, mlx->move);
@@ -179,7 +177,6 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 88)
 	{
-		//(*mlx).move[3] = -5.0f;
 		(*mlx).move[3] = 5.0;
 		ft_uprising_coord_2(&fdf->map_z, &fdf->map_c, mlx->move);
 		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 10, mlx->move);
