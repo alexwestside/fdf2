@@ -23,3 +23,24 @@ void ft_check_fdf(t_map *map_i)
 		i++;
 	}
 }
+
+void ft_get_color(char **str)
+{
+	char *s;
+
+	s = *str;
+	while (*s)
+	{
+		tolower(*s);
+		s++;
+	}
+	s = *str;
+	while(*s)
+	{
+
+
+	}
+
+
+
+}

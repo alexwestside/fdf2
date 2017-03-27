@@ -6,7 +6,7 @@ void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 	int i;
 
 	i = (((int)p.x * 4) + ((int)p.y * (*mlx)->s_line));
-	if (i >= 0 && i < W_WIDTH * 4 * W_HIGHT && p.x > 0 && p.x < W_WIDTH/* && p.y > 0*/)
+	if (i >= 0 && i <= W_WIDTH * 4 * W_HIGHT && ((int)p.x >= 0 && (int)p.x <= W_WIDTH) && ((int)p.y >= 0 && (int)p.y <= W_HIGHT))
 	{
 		(*mlx)->img_str[i] = color;
 		(*mlx)->img_str[++i] = color >> 8;

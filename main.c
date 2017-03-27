@@ -31,9 +31,9 @@ void ft_init_coord(char *str, t_point **p, int *y, int *x)
 	(*p)->x = *x;
 	(*p)->y = *y;
 	(*p)->z = ft_atoi(str);
-	(*p)->r = 0;
-	(*p)->g = 0;
-	(*p)->b = 0;
+	(*p)->r = ft_get_color(&str);
+	(*p)->g = ft_get_color(&str);
+	(*p)->b = ft_get_color(&str);
 }
 
 void ft_init_points(char *s, t_line **l, int *y)

@@ -25,6 +25,7 @@ typedef struct		s_point
 	int				r;
 	int				g;
 	int				b;
+//	int				color;
 }					t_point;
 
 typedef struct		s_line
