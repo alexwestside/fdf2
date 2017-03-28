@@ -24,23 +24,63 @@ void ft_check_fdf(t_map *map_i)
 	}
 }
 
-void ft_get_color(char **str)
+int ft_atoi_base(char *s, int base_len, int num)
 {
-	char *s;
+	size_t len;
+	char *base;
+	int i;
 
-	s = *str;
+
+	base = "0123456789abcdef";
+	len = ft_strlen(s);
 	while (*s)
 	{
-		tolower(*s);
+		i = -1;
+		while (base[++i])
+		{
+			if (*s == base[i])
+			{
+				num = num * 16 + i;
+				break ;
+			}
+		}
 		s++;
 	}
-	s = *str;
-	while(*s)
+	return (num);
+}
+
+void ft_get_color(char *color, t_point **p)
+{
+	int n;
+
+	n = ft_atoi_base(color, 10, 0);
+	(*p)->r = n;
+	(*p)->g = n >> 8;
+	(*p)->b = n >> 16;
+}
+
+void ft_extract_color(char **str, t_point **p)
+{
+	char *s1;
+	char *s2;
+	char *color;
+
+	s1 = *str;
+	while (*s1)
 	{
-
-
+		if (*s1 == ',')
+			break ;
+		s1++;
 	}
-
-
-
+	s1++;
+	s2 = s1 + 1;
+	if (*s1 == '0' && *s2 == 'x')
+	{
+		while(*s2)
+			s2++;
+		color = ft_strndup(s1 + 2, s2 - s1);
+		ft_get_color(color, p);
+	}
+	else
+		ft_fdf_error(3);
 }
