@@ -82,8 +82,8 @@ void ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, fl
 void ft_init_angle(t_angle **angle);
 int	key_exit(void *p);
 void ft_check_fdf(t_map *map_i);
-void ft_extract_color(char **str, t_point **p);
+int ft_extract_color(char **str, t_point **p, int i);
 void ft_get_color(char *color, t_point **p);
-int ft_atoi_base(char *s, int base_len, int num);
+int ft_atoi_base(char *s, int num);
 
 #endif //FDF2_FDF2_H

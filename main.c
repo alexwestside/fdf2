@@ -25,12 +25,20 @@ int ft_init_lines(t_line ***line, char *s, int fd)
 
 void ft_init_coord(char *str, t_point **p, int *y, int *x)
 {
+	int i;
+
 	if (!(*p = (t_point *) malloc(sizeof(t_point))))
 		ft_fdf_error(2);
 	(*p)->x = *x;
 	(*p)->y = *y;
 	(*p)->z = ft_atoi(str);
-	ft_extract_color(&str, p);
+	i = ft_extract_color(&str, p, 0);
+	if (!i)
+	{
+		(*p)->r = 0;
+		(*p)->g = 0;
+		(*p)->b = 0;
+	}
 }
 
 void ft_init_points(char *s, t_line **l, int *y)

@@ -24,15 +24,24 @@ void ft_check_fdf(t_map *map_i)
 	}
 }
 
-int ft_atoi_base(char *s, int base_len, int num)
+void ft_tolower_str(char **str)
 {
-	size_t len;
+	char *s;
+
+	s = *str;
+	while(*s)
+	{
+		*s = (char)ft_tolower(*s);
+		s++;
+	}
+}
+
+int ft_atoi_base(char *s, int num)
+{
 	char *base;
 	int i;
 
-
 	base = "0123456789abcdef";
-	len = ft_strlen(s);
 	while (*s)
 	{
 		i = -1;
@@ -53,34 +62,35 @@ void ft_get_color(char *color, t_point **p)
 {
 	int n;
 
-	n = ft_atoi_base(color, 10, 0);
+	ft_tolower_str(&color);
+	n = ft_atoi_base(color, 0);
 	(*p)->r = n;
 	(*p)->g = n >> 8;
 	(*p)->b = n >> 16;
 }
 
-void ft_extract_color(char **str, t_point **p)
+int ft_extract_color(char **str, t_point **p, int i)
 {
 	char *s1;
 	char *s2;
-	char *color;
 
 	s1 = *str;
 	while (*s1)
 	{
 		if (*s1 == ',')
-			break ;
+		{
+			s2 = s1 + 1;
+			if (*(++s1) == '0' && *(++s2) == 'x')
+			{
+				i = 1;
+				while(*s2)
+					s2++;
+				ft_get_color(ft_strndup(s1 + 2, s2 - s1), p);
+			}
+			else
+				ft_fdf_error(3);
+		}
 		s1++;
 	}
-	s1++;
-	s2 = s1 + 1;
-	if (*s1 == '0' && *s2 == 'x')
-	{
-		while(*s2)
-			s2++;
-		color = ft_strndup(s1 + 2, s2 - s1);
-		ft_get_color(color, p);
-	}
-	else
-		ft_fdf_error(3);
+	return (!i ? 0 : 1);
 }

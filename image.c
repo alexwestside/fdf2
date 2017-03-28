@@ -12,9 +12,9 @@ void ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
 //		(*mlx)->img_str[++i] = color >> 8;
 //		(*mlx)->img_str[++i] = color >> 16;
 
-		(*mlx)->img_str[i] = p.r;
-		(*mlx)->img_str[++i] = p.g;
-		(*mlx)->img_str[++i] = p.b;
+		(*mlx)->img_str[i] = (char)p.r;
+		(*mlx)->img_str[++i] = (char)p.g;
+		(*mlx)->img_str[++i] = (char)p.b;
 	}
 }
 
