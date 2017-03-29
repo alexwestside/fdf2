@@ -32,7 +32,7 @@ void	ft_draw_line(t_point p1, t_point p2, t_mlx **mlx)
 		if (error2 > -dy)
 		{
 			error -= dy;
-			p1.x += sx;
+			(p1.x) += sx;
 		}
 		if (error2 < dx)
 		{

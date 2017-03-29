@@ -95,6 +95,6 @@ void				ft_uprising_coord_2(t_map **map_z, float *move);
 
 void ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx);
 void ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx);
-//void ft_key_hook_3(int key, t_fdf **fdf, t_mlx **mlx);
+
 
 #endif //FDF2_FDF2_H

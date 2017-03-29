@@ -42,7 +42,7 @@ void	ft_turn_abscissa_x(t_angle **angle, t_map **map_c, float *move)
 		{
 			point = (*map_c)->line[i]->point[j]->y;
 			(*map_c)->line[i]->point[j]->y = (*map_c)->line[i]->point[j]->y * cosf(alpha) - (*map_c)->line[i]->point[j]->z * sinf(alpha);
-			(*map_c)->line[i]->point[j]->z = -point * sinf(alpha) + (*map_c)->line[i]->point[j]->z * cosf(alpha);
+			(*map_c)->line[i]->point[j]->z = -point * sinf(alpha) - (*map_c)->line[i]->point[j]->z * cosf(alpha);
 		}
 	}
 }
@@ -64,7 +64,7 @@ void	ft_turn_ordinata_y(t_angle **angle, t_map **map_c, float *move)
 		while (++j < (*map_c)->line[i]->len)
 		{
 			point = (*map_c)->line[i]->point[j]->x;
-			(*map_c)->line[i]->point[j]->x = (*map_c)->line[i]->point[j]->x * cosf(beta) + (*map_c)->line[i]->point[j]->z * sinf(beta);
+			(*map_c)->line[i]->point[j]->x = (*map_c)->line[i]->point[j]->x * cosf(beta) - (*map_c)->line[i]->point[j]->z * sinf(beta);
 			(*map_c)->line[i]->point[j]->z = -point * sinf(beta) + (*map_c)->line[i]->point[j]->z * cosf(beta);
 		}
 	}
