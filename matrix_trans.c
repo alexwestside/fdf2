@@ -1,17 +1,16 @@
 
 #include "fdf2.h"
 
-void ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move)
+void	ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move)
 {
-	float gamma;
-	float point;
+	float	gamma;
+	float	point;
+	int		i;
+	int		j;
 
 	id == 3 ? (*angle)->gamma = (*angle)->gamma + move[3] : 0;
 	id == 8 ? (*angle)->gamma = (*angle)->gamma - move[3] : 0;
 	gamma = (float)((M_PI * ((*angle)->gamma)) / 180);
-	int i;
-	int j;
-
 	i = -1;
 	while (++i < (*map_c)->len)
 	{
@@ -25,17 +24,16 @@ void ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move)
 	}
 }
 
-void ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move)
+void	ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move)
 {
-	float alpha;
-	float point;
+	float	alpha;
+	float	point;
+	int		i;
+	int		j;
 
 	id == 4 ? (*angle)->alpha = (*angle)->alpha + move[3] : 0;
 	id == 9 ? (*angle)->alpha = (*angle)->alpha - move[3] : 0;
 	alpha = (float)((M_PI * ((*angle)->alpha)) / 180);
-	int i;
-	int j;
-
 	i = -1;
 	while (++i < (*map_c)->len)
 	{
@@ -49,17 +47,16 @@ void ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move)
 	}
 }
 
-void ft_turn_ordinata_y(t_angle **angle, t_map **map_c, int id, float *move)
+void	ft_turn_ordinata_y(t_angle **angle, t_map **map_c, int id, float *move)
 {
-	float beta;
-	float point;
+	float	beta;
+	float	point;
+	int		i;
+	int		j;
 
 	id == 5 ? (*angle)->beta = (*angle)->beta + move[3] : 0;
 	id == 10 ? (*angle)->beta = (*angle)->beta - move[3] : 0;
 	beta = (float)((M_PI * ((*angle)->beta)) / 180);
-	int i;
-	int j;
-
 	i = -1;
 	while (++i < (*map_c)->len)
 	{
@@ -73,10 +70,9 @@ void ft_turn_ordinata_y(t_angle **angle, t_map **map_c, int id, float *move)
 	}
 }
 
-void ft_matrix_trans(t_angle **angle, t_map **map_c, int id, float *move)
+void	ft_matrix_trans(t_angle **angle, t_map **map_c, int id, float *move)
 {
 	ft_turn_aplicate_z(angle, map_c, id, move);
 	ft_turn_abscissa_x(angle, map_c, id, move);
 	ft_turn_ordinata_y(angle, map_c, id, move);
 }
-
