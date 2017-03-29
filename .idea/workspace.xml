@@ -39,7 +39,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/hook.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/hook.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fdf2" afterPath="$PROJECT_DIR$/cmake-build-debug/fdf2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdf2.h" afterPath="$PROJECT_DIR$/fdf2.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hook.c" afterPath="$PROJECT_DIR$/hook.c" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -133,8 +132,8 @@
       <file leaf-file-name="hook.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hook.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="283" column="17" lean-forward="false" selection-start-line="283" selection-start-column="17" selection-end-line="283" selection-end-column="17" />
+            <state relative-caret-position="551">
+              <caret line="128" column="1" lean-forward="false" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -596,14 +595,7 @@
       <workItem from="1490700682297" duration="800000" />
       <workItem from="1490706982053" duration="407000" />
       <workItem from="1490708982126" duration="12350000" />
-      <workItem from="1490779833952" duration="9094000" />
-    </task>
-    <task id="LOCAL-00012" summary="center_1">
-      <created>1490040437187</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1490040437187</updated>
+      <workItem from="1490779833952" duration="9332000" />
     </task>
     <task id="LOCAL-00013" summary="center_1">
       <created>1490054685442</created>
@@ -941,11 +933,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490789310741</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="norm_5">
+      <created>1490794826514</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1490794826514</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191155000" />
+    <option name="totallyTimeSpent" value="191393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -1025,7 +1024,8 @@
     <MESSAGE value="norm_2" />
     <MESSAGE value="norm_3" />
     <MESSAGE value="norm_4" />
-    <option name="LAST_COMMIT_MESSAGE" value="norm_4" />
+    <MESSAGE value="norm_5" />
+    <option name="LAST_COMMIT_MESSAGE" value="norm_5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1439,8 +1439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hook.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="283" column="17" lean-forward="false" selection-start-line="283" selection-start-column="17" selection-end-line="283" selection-end-column="17" />
+        <state relative-caret-position="551">
+          <caret line="128" column="1" lean-forward="false" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
           <folding />
         </state>
       </provider>
