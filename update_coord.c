@@ -51,11 +51,11 @@ void ft_coord_update(t_point **point_x, t_map **map_i, t_map **map_z, t_map **ma
 	}
 }
 
-void ft_uprising_coord(t_map **map_c, t_mlx **mlx)
+void	ft_uprising_coord(t_map **map_c, t_mlx **mlx)
 {
 	int p;
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = -1;
 	p = (*map_c)->len > (*(*map_c)->line)->len ? (W_HIGHT - 50) / (*map_c)->len : (W_HIGHT - 250) / (*(*map_c)->line)->len;
@@ -70,10 +70,10 @@ void ft_uprising_coord(t_map **map_c, t_mlx **mlx)
 	}
 }
 
-void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
+void	ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 {
-	int x_len;
-	int y_len;
+	int	x_len;
+	int	y_len;
 
 	x_len = (*(*map_i)->line)->len;
 	y_len = (*map_i)->len;
@@ -88,7 +88,7 @@ void ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	(*mlx)->zero->g = 0;
 	(*mlx)->zero->b = 0;
 	ft_coord_update(&(*mlx)->zero, map_i, map_z, map_c);
-	ft_coord_update(&(*mlx)->zero, map_i, map_z, map_c);
+	//ft_coord_update(&(*mlx)->zero, map_i, map_z, map_c);
 	ft_matrix_trans(&(*mlx)->angle, map_c, 0, (*mlx)->move);
 	ft_uprising_coord(map_c, mlx);
 

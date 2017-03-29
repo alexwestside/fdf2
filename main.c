@@ -1,10 +1,10 @@
 
 #include "fdf2.h"
 
-int ft_init_lines(t_line ***line, char *s, int fd)
+int		ft_init_lines(t_line ***line, char *s, int fd)
 {
-	int cl;
-	char tmp;
+	int		cl;
+	char	tmp;
 
 	cl = 0;
 	if ((fd = open(s, O_RDONLY)) < 0)
@@ -20,14 +20,13 @@ int ft_init_lines(t_line ***line, char *s, int fd)
 	if (cl == 0)
 		return (1);
 	return (cl);
-
 }
 
-void ft_init_coord(char *str, t_point **p, int *y, int *x)
+void	ft_init_coord(char *str, t_point **p, int *y, int *x)
 {
-	int i;
+	int	i;
 
-	if (!(*p = (t_point *) malloc(sizeof(t_point))))
+	if (!(*p = (t_point *)malloc(sizeof(t_point))))
 		ft_fdf_error(2);
 	(*p)->x = *x;
 	(*p)->y = *y;
@@ -35,23 +34,23 @@ void ft_init_coord(char *str, t_point **p, int *y, int *x)
 	i = ft_extract_color(&str, p, 0);
 	if (!i)
 	{
-		(*p)->r = 0;
-		(*p)->g = 0;
-		(*p)->b = 0;
+		(*p)->r = 0xFFFFFF;
+		(*p)->g = 0xFFFFFF >> 8;
+		(*p)->b = 0xFFFFFF >> 16;
 	}
 }
 
-void ft_init_points(char *s, t_line **l, int *y)
+void	ft_init_points(char *s, t_line **l, int *y)
 {
-	char **str;
-	int cp;
-	t_point **p;
-	int x;
+	char	**str;
+	int		cp;
+	t_point	**p;
+	int		x;
 
 	x = 0;
 	cp = 0;
 	str = ft_strsplit(s, ' ');
-	while(str[cp])
+	while (str[cp])
 		cp++;
 	!(*l = (t_line *)malloc(sizeof(t_line))) ? ft_fdf_error(2) : 0;
 	!((*l)->point = (t_point **)malloc(sizeof(t_point *) * cp)) ? ft_fdf_error(2) : 0;
@@ -67,11 +66,11 @@ void ft_init_points(char *s, t_line **l, int *y)
 	*p = NULL;
 }
 
-void ft_parse_fdf(t_map **map, char *s, int fd)
+void	ft_parse_fdf(t_map **map, char *s, int fd)
 {
-	char *tmp;
-	int y;
-	t_line **l;
+	char	*tmp;
+	int		y;
+	t_line	**l;
 
 	y = 0;
 	(*map) = (t_map *)malloc(sizeof(t_map));
@@ -91,9 +90,10 @@ void ft_parse_fdf(t_map **map, char *s, int fd)
 		ft_fdf_error(3);
 }
 
-int main(int ac, char **av)
+int		main(int ac, char **av)
 {
-	t_fdf *fdf;
+	t_fdf	*fdf;
+
 	if (ac != 2)
 		ft_fdf_error(1);
 	!(fdf = (t_fdf *)malloc(sizeof(t_fdf))) ? ft_fdf_error(2) : 0;
