@@ -1,10 +1,10 @@
 
 #include "fdf2.h"
 
-void ft_check_fdf(t_map *map_i)
+void	ft_check_fdf(t_map *map_i)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	i = 0;
 	len = map_i->line[i]->len;
@@ -16,22 +16,22 @@ void ft_check_fdf(t_map *map_i)
 	}
 }
 
-void ft_tolower_str(char **str)
+void	ft_tolower_str(char **str)
 {
-	char *s;
+	char	*s;
 
 	s = *str;
-	while(*s)
+	while (*s)
 	{
 		*s = (char)ft_tolower(*s);
 		s++;
 	}
 }
 
-int ft_atoi_base(char *s, int num)
+int		ft_atoi_base(char *s, int num)
 {
-	char *base;
-	int i;
+	char	*base;
+	int		i;
 
 	base = "0123456789abcdef";
 	while (*s)
@@ -50,9 +50,9 @@ int ft_atoi_base(char *s, int num)
 	return (num);
 }
 
-void ft_get_color(char *color, t_point **p)
+void	ft_get_color(char *color, t_point **p)
 {
-	int n;
+	int	n;
 
 	ft_tolower_str(&color);
 	n = ft_atoi_base(color, 0);
@@ -61,10 +61,10 @@ void ft_get_color(char *color, t_point **p)
 	(*p)->b = n >> 16;
 }
 
-int ft_extract_color(char **str, t_point **p, int i)
+int		ft_extract_color(char **str, t_point **p, int i)
 {
-	char *s1;
-	char *s2;
+	char	*s1;
+	char	*s2;
 
 	s1 = *str;
 	while (*s1)
@@ -75,7 +75,7 @@ int ft_extract_color(char **str, t_point **p, int i)
 			if (*(++s1) == '0' && *(++s2) == 'x')
 			{
 				i = 1;
-				while(*s2)
+				while (*s2)
 					s2++;
 				ft_get_color(ft_strndup(s1 + 2, s2 - s1), p);
 			}

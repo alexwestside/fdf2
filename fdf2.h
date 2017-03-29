@@ -25,7 +25,6 @@ typedef struct		s_point
 	int				r;
 	int				g;
 	int				b;
-//	int				color;
 }					t_point;
 
 typedef struct		s_line
@@ -49,7 +48,7 @@ typedef struct		s_mlx
 	int				bpp;
 	int				endian;
 	int				s_line;
-	t_point			*cente;
+	t_point			*center;
 	t_point			*zero;
 	float			move[5];
 	t_angle			*angle;
@@ -63,11 +62,11 @@ typedef	struct		s_fdf
 	t_mlx			*mlx;
 }					t_fdf;
 
-int main(int ac, char **av);
-void ft_parse_fdf(t_map **map, char *s, int fd);
-void ft_init_points(char *s, t_line **l, int *y);
-void ft_init_coord(char *str, t_point **p, int *y, int *x);
-int ft_init_lines(t_line ***line, char *s, int fd);
+int					main(int ac, char **av);
+void				ft_parse_fdf(t_map **map, char *s, int fd);
+void				ft_init_points(char *s, t_line **l, int *y);
+void				ft_init_coord(char *str, t_point **p, int *y, int *x);
+int					ft_init_lines(t_line ***line, char *s, int fd);
 void ft_fdf_error(int id);
 void ft_get_window(t_fdf **fdf, int h, int w, char *s);
 void ft_put_image(t_fdf **fdf, int h, int w);
@@ -87,5 +86,11 @@ int ft_extract_color(char **str, t_point **p, int i);
 void ft_get_color(char *color, t_point **p);
 int ft_atoi_base(char *s, int num);
 void ft_tolower_str(char **str);
+void	ft_uprising_coord(t_map **map_c);
+void	ft_turn_ordinata_y(t_angle **angle, t_map **map_c, int id, float *move);
+void	ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move);
+void	ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move);
+void ft_uprising_coord_3(t_map **map_c);
+void ft_uprising_coord_2(t_map **map_z, float *move);
 
 #endif //FDF2_FDF2_H

@@ -57,7 +57,7 @@ void	ft_coord_update_c(t_point **point_x, t_map **map_i, t_map **map_c, int i)
 	}
 }
 
-void	ft_uprising_coord(t_map **map_c, t_mlx **mlx)
+void	ft_uprising_coord(t_map **map_c)
 {
 	int	p;
 	int	i;
@@ -96,5 +96,5 @@ void	ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	ft_coord_update_z(&(*mlx)->zero, map_i, map_z, -1);
 	ft_coord_update_c(&(*mlx)->zero, map_i, map_c, -1);
 	ft_matrix_trans(&(*mlx)->angle, map_c, 0, (*mlx)->move);
-	ft_uprising_coord(map_c, mlx);
+	ft_uprising_coord(map_c);
 }
