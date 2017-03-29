@@ -81,8 +81,8 @@ int		ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 	}
 	if (key == 124 || key == 123 || key == 126 || key == 125 || key == 78 || key == 69)
 		ft_key_hook_1(key, &fdf, &mlx);
-//	if (key == 89 || key == 91 || key == 92 || key == 86 || key == 87 || key == 88)
-//		ft_key_hook_2(key, &fdf, &mlx);
+	if (key == 89 || key == 91 || key == 92 || key == 86 || key == 87 || key == 88)
+		ft_key_hook_2(key, &fdf, &mlx);
 //	if (key == 116 || key == 121)
 //		ft_key_hook_3(key, &fdf, &mlx);
 	return (0);
@@ -102,27 +102,26 @@ void	ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 	(key == 78) ? (*(*mlx)).move[5] = 0 : 0;
 	(key == 69) ? (*(*mlx)).move[2] = 1.09 : 0;
 	(key == 69) ? (*(*mlx)).move[5] = 0 : 0;
-
-//	if (key == 124)
-//		(*(*mlx)).move[0] = 1.5;
-//	if (key == 123)
-//		(*(*mlx)).move[0] = -1;
-//	if (key == 126)
-//		(*(*mlx)).move[1] = -1;
-//	if (key == 125)
-//		(*(*mlx)).move[1] = 1;
-//	if (key == 78)
-//		(*(*mlx)).move[2] = 0.91;
-//	if (key == 69)
-//		(*(*mlx)).move[2] = 1.09;
 	ft_uprising_coord_2(&(*fdf)->map_z, (*mlx)->move);
 	ft_matrix_trans_2(&(*fdf)->mlx->angle, &(*fdf)->map_z, &(*fdf)->map_c, (*mlx)->move);
 	ft_uprising_coord_3(&(*fdf)->map_c);
 	ft_put_image(fdf, W_HIGHT, W_WIDTH);
 }
 
-//void	ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx)
-//{
+void	ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx)
+{
+	(*mlx)->move[3] = 5.0;
+	ft_uprising_coord_2(&(*fdf)->map_z, (*mlx)->move);
+	(key == 89) ? (*(*mlx)).move[5] = 3 : 0;
+	(key == 91) ? (*(*mlx)).move[5] = 4 : 0;
+	(key == 92) ? (*(*mlx)).move[5] = 5 : 0;
+	(key == 86) ? (*(*mlx)).move[5] = 8 : 0;
+	(key == 87) ? (*(*mlx)).move[5] = 9 : 0;
+	(key == 88) ? (*(*mlx)).move[5] = 10 : 0;
+	ft_matrix_trans_2(&(*fdf)->mlx->angle, &(*fdf)->map_z, &(*fdf)->map_c, (*mlx)->move);
+	ft_uprising_coord_3(&(*fdf)->map_c);
+	ft_put_image(fdf, W_HIGHT, W_WIDTH);
+
 //	(*mlx)->move[3] = 5.0;
 //	ft_uprising_coord_2(&(*fdf)->map_z, (*mlx)->move);
 //	if (key == 89)
@@ -139,7 +138,7 @@ void	ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 //		ft_matrix_trans_2(&(*fdf)->mlx->angle, &(*fdf)->map_z, &(*fdf)->map_c, 10, (*mlx)->move);
 //	ft_uprising_coord_3(&(*fdf)->map_c);
 //	ft_put_image(fdf, W_HIGHT, W_WIDTH);
-//}
+}
 //
 //void	ft_key_hook_3(int key, t_fdf **fdf, t_mlx **mlx)
 //{
