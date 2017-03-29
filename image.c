@@ -44,31 +44,25 @@ void	ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 
 void	ft_draw_map_c(t_fdf **fdf)
 {
-	t_map	m;
 	t_point	*p1;
 	t_point	*p2;
 	t_point	*p3;
 	int		i;
 	int		j;
 
-	m = (*(*fdf)->map_c);
 	i = -1;
-	while (++i < m.len)
+	while (++i < (*fdf)->map_c->len)
 	{
 		j = -1;
-		while (++j </* m.line[i]->len &&*/ (*fdf)->map_c->line[i]->len)
+		while (++j < (*fdf)->map_c->line[i]->len)
 		{
 			p1 = (*fdf)->map_c->line[i]->point[j];
 			p2 = (*fdf)->map_c->line[i]->point[j + 1] ? (*fdf)->map_c->line[i]->point[j + 1] : NULL;
 			p3 = (*fdf)->map_c->line[i + 1] ? (*fdf)->map_c->line[i + 1]->point[j] : NULL;
-
-//			p1 = m.line[i]->point[j];
-//			p2 = m.line[i]->point[j + 1] ? m.line[i]->point[j + 1] : NULL;
-//			p3 = m.line[i + 1] ? m.line[i + 1]->point[j] : NULL;
 			if (p1 && p2)
-				ft_draw_line(*p1, *p2, m, &(*fdf)->mlx);
+				ft_draw_line(*p1, *p2, (*(*fdf)->map_c), &(*fdf)->mlx);
 			if (p1 && p3)
-				ft_draw_line(*p1, *p3, m, &(*fdf)->mlx);
+				ft_draw_line(*p1, *p3, (*(*fdf)->map_c), &(*fdf)->mlx);
 		}
 	}
 }

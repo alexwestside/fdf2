@@ -6,7 +6,6 @@ void ft_uprising_coord_2(t_map **map_z, t_map **map_c, float *move)
 {
 	int i;
 	int j;
-	float p;
 
 	i = -1;
 	while (++i < (*map_z)->len)
@@ -49,12 +48,6 @@ void ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, fl
 		}
 	}
 	ft_matrix_trans(angle, map_c, id, move);
-}
-
-int	key_exit(void *p)
-{
-	(void)p;
-	exit (0);
 }
 
 void ft_uprising_coord_3(t_map **map_c)
