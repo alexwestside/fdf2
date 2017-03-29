@@ -93,4 +93,6 @@ void				ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move);
 void				ft_uprising_coord_3(t_map **map_c);
 void				ft_uprising_coord_2(t_map **map_z, float *move);
 
+void ft_key_hook_1(int key, t_fdf *fdf, t_mlx *mlx);
+
 #endif //FDF2_FDF2_H

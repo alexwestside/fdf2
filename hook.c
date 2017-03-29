@@ -80,54 +80,56 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 		mlx_destroy_window((*fdf->mlx).mlx, (*fdf->mlx).win);
 		exit(0);
 	}
-	if (key == 124)
-	{
-		(*mlx).move[0] = 1.5;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
-	if (key == 123)
-	{
-		(*mlx).move[0] = -1;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
-	if (key == 126)
-	{
-		(*mlx).move[1] = -1;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
-	if (key == 125)
-	{
-		(*mlx).move[1] = 1;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
-	if (key == 78)
-	{
-		(*mlx).move[2] = 0.91;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
-	if (key == 69)
-	{
-		(*mlx).move[2] = 1.09;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
+	if (key == 124 || key == 123 || key == 126 || key == 125 || key == 78 || key == 69)
+		ft_key_hook_1(key, fdf, mlx);
+//	if (key == 124)
+//	{
+//		(*mlx).move[0] = 1.5;
+//		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
+//	if (key == 123)
+//	{
+//		(*mlx).move[0] = -1;
+//		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
+//	if (key == 126)
+//	{
+//		(*mlx).move[1] = -1;
+//		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
+//	if (key == 125)
+//	{
+//		(*mlx).move[1] = 1;
+//		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
+//	if (key == 78)
+//	{
+//		(*mlx).move[2] = 0.91;
+//		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
+//	if (key == 69)
+//	{
+//		(*mlx).move[2] = 1.09;
+//		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+//		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+//		ft_uprising_coord_3(&fdf->map_c);
+//		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+//	}
 	if (key == 89)
 	{
 		(*mlx).move[3] = 5.0;
@@ -193,5 +195,77 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
 	}
 	return (0);
+}
+
+void ft_key_hook_1(int key, t_fdf *fdf, t_mlx *mlx)
+{
+	if (key == 124)
+		(*mlx).move[0] = 1.5;
+	if (key == 123)
+		(*mlx).move[0] = -1;
+	if (key == 126)
+		(*mlx).move[1] = -1;
+	if (key == 125)
+		(*mlx).move[1] = 1;
+	if (key == 78)
+		(*mlx).move[2] = 0.91;
+	if (key == 69)
+		(*mlx).move[2] = 1.09;
+	ft_uprising_coord_2(&fdf->map_z, mlx->move);
+	ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 0, mlx->move);
+	ft_uprising_coord_3(&fdf->map_c);
+	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+}
+
+void ft_key_hook_2(int key, t_fdf *fdf, t_mlx *mlx)
+{
+	if (key == 89)
+	{
+		(*mlx).move[3] = 5.0;
+		ft_uprising_coord_2(&fdf->map_z,mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 3, mlx->move);
+		ft_uprising_coord_3(&fdf->map_c);
+		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 91)
+	{
+		(*mlx).move[3] = 5.0;
+		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 4, mlx->move);
+		ft_uprising_coord_3(&fdf->map_c);
+		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 92)
+	{
+		(*mlx).move[3] = 5.0;
+		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 5, mlx->move);
+		ft_uprising_coord_3(&fdf->map_c);
+		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+	if (key == 86)
+	{
+		(*mlx).move[3] = 5.0;
+		ft_uprising_coord_2(&fdf->map_z, mlx->move);
+		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 8, mlx->move);
+		ft_uprising_coord_3(&fdf->map_c);
+		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
+	}
+
+}
+
+void ft_key_hook_3(int key, t_fdf *fdf, t_mlx *mlx)
+{
+
+}
+
+void ft_key_hook_4(int key, t_fdf *fdf, t_mlx *mlx)
+{
+
+}
+
+void ft_key_hook_5(int key, t_fdf *fdf, t_mlx *mlx)
+{
+
 }
 
