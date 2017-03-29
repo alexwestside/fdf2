@@ -1,11 +1,10 @@
 
 #include "fdf2.h"
 
-
-void ft_uprising_coord_2(t_map **map_z, float *move)
+void	ft_uprising_coord_2(t_map **map_z, float *move)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = -1;
 	while (++i < (*map_z)->len)
@@ -22,11 +21,10 @@ void ft_uprising_coord_2(t_map **map_z, float *move)
 	}
 }
 
-void ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, float *move)
+void	ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, float *move)
 {
-	int p;
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = -1;
 	while (++i < (*map_c)->len)
@@ -50,12 +48,11 @@ void ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, fl
 	ft_matrix_trans(angle, map_c, id, move);
 }
 
-void ft_uprising_coord_3(t_map **map_c)
+void	ft_uprising_coord_3(t_map **map_c)
 {
-
-	int i;
-	int j;
-	int p;
+	int	i;
+	int	j;
+	int	p;
 
 	i = -1;
 	p = (*map_c)->len > (*(*map_c)->line)->len ? (W_HIGHT - 600) / (*map_c)->len : (W_HIGHT - 600) / (*(*map_c)->line)->len;
@@ -71,9 +68,11 @@ void ft_uprising_coord_3(t_map **map_c)
 	}
 }
 
-int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
+int		ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 {
-	if (key == 53 || key == 124 || key == 123 || key == 126 || key == 125 || key == 78 || key == 69 || key == 89 || key == 91 || key == 92 || key == 86 || key == 87 || key == 88 || key == 116 || key == 121)
+	if (key == 53 || key == 124 || key == 123 || key == 126 || key == 125 ||
+		key == 78 || key == 69 || key == 89 || key == 91 || key == 92 ||
+		key == 86 || key == 87 || key == 88 || key == 116 || key == 121)
 		ft_bzero((*mlx).move, sizeof(float));
 	if (key == 53)
 	{
@@ -86,26 +85,10 @@ int ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 		ft_key_hook_2(key, &fdf, &mlx);
 	if (key == 116 || key == 121)
 		ft_key_hook_3(key, &fdf, &mlx);
-	if (key == 116)
-	{
-		(*mlx).move[4] = 1.1;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 6, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
-	if (key == 121)
-	{
-		(*mlx).move[4] = 1.1;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 7, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
 	return (0);
 }
 
-void ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
+void	ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 {
 	if (key == 124)
 		(*(*mlx)).move[0] = 1.5;
@@ -125,7 +108,7 @@ void ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 	ft_put_image(fdf, W_HIGHT, W_WIDTH);
 }
 
-void ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx)
+void	ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx)
 {
 	(*mlx)->move[3] = 5.0;
 	ft_uprising_coord_2(&(*fdf)->map_z, (*mlx)->move);
@@ -145,33 +128,14 @@ void ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx)
 	ft_put_image(fdf, W_HIGHT, W_WIDTH);
 }
 
-void ft_key_hook_3(int key, t_fdf *fdf, t_mlx *mlx)
+void	ft_key_hook_3(int key, t_fdf **fdf, t_mlx **mlx)
 {
+	(*mlx)->move[4] = 1.1;
+	ft_uprising_coord_2(&(*fdf)->map_z, (*mlx)->move);
 	if (key == 116)
-	{
-		(*mlx).move[4] = 1.1;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 6, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
+		ft_matrix_trans_2(&(*fdf)->mlx->angle, &(*fdf)->map_z, &(*fdf)->map_c, 6, (*mlx)->move);
 	if (key == 121)
-	{
-		(*mlx).move[4] = 1.1;
-		ft_uprising_coord_2(&fdf->map_z, mlx->move);
-		ft_matrix_trans_2(&fdf->mlx->angle, &fdf->map_z, &fdf->map_c, 7, mlx->move);
-		ft_uprising_coord_3(&fdf->map_c);
-		ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	}
+		ft_matrix_trans_2(&(*fdf)->mlx->angle, &(*fdf)->map_z, &(*fdf)->map_c, 7, (*mlx)->move);
+	ft_uprising_coord_3(&(*fdf)->map_c);
+	ft_put_image(fdf, W_HIGHT, W_WIDTH);
 }
-
-void ft_key_hook_4(int key, t_fdf *fdf, t_mlx *mlx)
-{
-
-}
-
-void ft_key_hook_5(int key, t_fdf *fdf, t_mlx *mlx)
-{
-
-}
-
