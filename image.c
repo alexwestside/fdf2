@@ -14,9 +14,8 @@ void	ft_draw_pixel(t_point p, t_mlx **mlx)
 	}
 }
 
-void	ft_draw_line(t_point p1, t_point p2, t_mlx **mlx)
+void	ft_draw_line(t_point p1, t_point p2, t_mlx **mlx, int error)
 {
-	int			error;
 	const int	dx = (int)fabsf((int)p1.x - (int)p2.x);
 	const int	dy = (int)fabsf((int)p1.y - (int)p2.y);
 	const int	sx = p1.x < (int)p2.x ? 1 : -1;
@@ -60,9 +59,9 @@ void	ft_draw_map_c(t_fdf **fdf)
 			p2 = (*fdf)->map_c->line[i]->point[j + 1] ? (*fdf)->map_c->line[i]->point[j + 1] : NULL;
 			p3 = (*fdf)->map_c->line[i + 1] ? (*fdf)->map_c->line[i + 1]->point[j] : NULL;
 			if (p1 && p2)
-				ft_draw_line(*p1, *p2, &(*fdf)->mlx);
+				ft_draw_line(*p1, *p2, &(*fdf)->mlx, 0);
 			if (p1 && p3)
-				ft_draw_line(*p1, *p3, &(*fdf)->mlx);
+				ft_draw_line(*p1, *p3, &(*fdf)->mlx, 0);
 		}
 	}
 }

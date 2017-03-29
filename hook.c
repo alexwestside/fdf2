@@ -91,6 +91,12 @@ void	ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 	(*mlx)->move[3] = 5.0;
 	(*mlx)->move[4] = 1.1;
 	(*mlx)->move[5] = 0;
+	(key == 124) ? (*mlx)->move[0] = 1.5 : 0;
+	(key == 123) ? (*mlx)->move[0] = -1 : 0;
+	(key == 126) ? (*mlx)->move[1] = -1 : 0;
+	(key == 125) ? (*mlx)->move[1] = 1 : 0;
+	(key == 78) ? (*mlx)->move[2] = 0.91 : 0;
+	(key == 69) ? (*mlx)->move[2] = 1.09 : 0;
 	(key == 89) ? (*mlx)->move[5] = 3 : 0;
 	(key == 91) ? (*mlx)->move[5] = 4 : 0;
 	(key == 92) ? (*mlx)->move[5] = 5 : 0;
@@ -99,12 +105,6 @@ void	ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 	(key == 88) ? (*mlx)->move[5] = 10 : 0;
 	(key == 116) ? (*mlx)->move[5] = 6 : 0;
 	(key == 121) ? (*mlx)->move[5] = 7 : 0;
-	(key == 124) ? (*mlx)->move[0] = 1.5 : 0;
-	(key == 123) ? (*mlx)->move[0] = -1 : 0;
-	(key == 126) ? (*mlx)->move[1] = -1 : 0;
-	(key == 125) ? (*mlx)->move[1] = 1 : 0;
-	(key == 78) ? (*mlx)->move[2] = 0.91 : 0;
-	(key == 69) ? (*mlx)->move[2] = 1.09 : 0;
 	ft_uprising_coord_2(&(*fdf)->map_z, (*mlx)->move);
 	ft_matrix_trans_2(&(*fdf)->mlx->angle, &(*fdf)->map_z, &(*fdf)->map_c, (*mlx)->move);
 	ft_uprising_coord_3(&(*fdf)->map_c);

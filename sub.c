@@ -86,3 +86,8 @@ int		ft_extract_color(char **str, t_point **p, int i)
 	}
 	return (!i ? 0 : 1);
 }
+
+char *ft_help_window(char *s)
+{
+
+}
