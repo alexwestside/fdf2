@@ -90,18 +90,31 @@ int		ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx)
 
 void	ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 {
-	if (key == 124)
-		(*(*mlx)).move[0] = 1.5;
-	if (key == 123)
-		(*(*mlx)).move[0] = -1;
-	if (key == 126)
-		(*(*mlx)).move[1] = -1;
-	if (key == 125)
-		(*(*mlx)).move[1] = 1;
-	if (key == 78)
-		(*(*mlx)).move[2] = 0.91;
-	if (key == 69)
-		(*(*mlx)).move[2] = 1.09;
+	(key == 124) ? (*(*mlx)).move[0] = 1.5 : 0;
+	(key == 124) ? (*(*mlx)).move[5] = 0 : 0;
+	(key == 123) ? (*(*mlx)).move[0] = -1 : 0;
+	(key == 123) ? (*(*mlx)).move[5] = 0 : 0;
+	(key == 126) ? (*(*mlx)).move[1] = -1 : 0;
+	(key == 126) ? (*(*mlx)).move[5] = 0 : 0;
+	(key == 125) ? (*(*mlx)).move[1] = 1 : 0;
+	(key == 125) ? (*(*mlx)).move[5] = 0 : 0;
+	(key == 78) ? (*(*mlx)).move[2] = 0.91 : 0;
+	(key == 78) ? (*(*mlx)).move[5] = 2 : 0;
+	(key == 78) ? (*(*mlx)).move[2] = 1.09 : 0;
+	(key == 78) ? (*(*mlx)).move[5] = 2 : 0;
+
+//	if (key == 124)
+//		(*(*mlx)).move[0] = 1.5;
+//	if (key == 123)
+//		(*(*mlx)).move[0] = -1;
+//	if (key == 126)
+//		(*(*mlx)).move[1] = -1;
+//	if (key == 125)
+//		(*(*mlx)).move[1] = 1;
+//	if (key == 78)
+//		(*(*mlx)).move[2] = 0.91;
+//	if (key == 69)
+//		(*(*mlx)).move[2] = 1.09;
 	ft_uprising_coord_2(&(*fdf)->map_z, (*mlx)->move);
 	ft_matrix_trans_2(&(*fdf)->mlx->angle, &(*fdf)->map_z, &(*fdf)->map_c, 0, (*mlx)->move);
 	ft_uprising_coord_3(&(*fdf)->map_c);
