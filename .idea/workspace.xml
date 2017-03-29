@@ -36,11 +36,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac31c5ea-2506-4a41-a8d8-3aaac6ec0ecf" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/image.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/image.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/main.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/update_coord.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/update_coord.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fdf2" afterPath="$PROJECT_DIR$/cmake-build-debug/fdf2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image.c" afterPath="$PROJECT_DIR$/image.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/elem-col.fdf" afterPath="$PROJECT_DIR$/maps/elem-col.fdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdf2.h" afterPath="$PROJECT_DIR$/fdf2.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hook.c" afterPath="$PROJECT_DIR$/hook.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/update_coord.c" afterPath="$PROJECT_DIR$/update_coord.c" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,8 +74,8 @@
       <file leaf-file-name="fdf2.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fdf2.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="86" column="35" lean-forward="false" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+            <state relative-caret-position="731">
+              <caret line="80" column="72" lean-forward="false" selection-start-line="80" selection-start-column="72" selection-end-line="80" selection-end-column="72" />
               <folding>
                 <element signature="e#42#67#0" expanded="true" />
               </folding>
@@ -84,8 +86,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,8 +96,8 @@
       <file leaf-file-name="update_coord.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/update_coord.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="2220">
+              <caret line="148" column="24" lean-forward="false" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -104,7 +106,7 @@
       <file leaf-file-name="matrix_trans.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matrix_trans.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="221">
               <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
               <folding />
             </state>
@@ -114,7 +116,7 @@
       <file leaf-file-name="image.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="-214">
               <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
               <folding />
             </state>
@@ -134,8 +136,8 @@
       <file leaf-file-name="hook.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hook.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1995">
-              <caret line="133" column="84" lean-forward="false" selection-start-line="133" selection-start-column="84" selection-end-line="133" selection-end-column="84" />
+            <state relative-caret-position="480">
+              <caret line="67" column="61" lean-forward="false" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -299,12 +301,12 @@
         <option value="$PROJECT_DIR$/589" />
         <option value="$PROJECT_DIR$/test" />
         <option value="$PROJECT_DIR$/matrix_trans.c" />
-        <option value="$PROJECT_DIR$/hook.c" />
-        <option value="$PROJECT_DIR$/fdf2.h" />
         <option value="$PROJECT_DIR$/sub.c" />
         <option value="$PROJECT_DIR$/maps/elem-col.fdf" />
         <option value="$PROJECT_DIR$/image.c" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/fdf2.h" />
+        <option value="$PROJECT_DIR$/hook.c" />
         <option value="$PROJECT_DIR$/update_coord.c" />
       </list>
     </option>
@@ -556,7 +558,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/nfs/2016/o/orizhiy/ClionProjects/fdf2/maps/t1.fdf&quot;" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fdf2" TARGET_NAME="fdf2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fdf2" RUN_TARGET_NAME="fdf2">
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;/nfs/2016/o/orizhiy/ClionProjects/fdf2/maps/42.fdf&quot;" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fdf2" TARGET_NAME="fdf2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fdf2" RUN_TARGET_NAME="fdf2">
       <envs />
       <method />
     </configuration>
@@ -597,14 +599,7 @@
       <workItem from="1490700682297" duration="800000" />
       <workItem from="1490706982053" duration="407000" />
       <workItem from="1490708982126" duration="12350000" />
-      <workItem from="1490779833952" duration="833000" />
-    </task>
-    <task id="LOCAL-00004" summary="center">
-      <created>1489771470836</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1489771470836</updated>
+      <workItem from="1490779833952" duration="2184000" />
     </task>
     <task id="LOCAL-00005" summary="center">
       <created>1489786102542</created>
@@ -942,11 +937,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490730354181</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="color_v2">
+      <created>1490781344875</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1490781344875</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182894000" />
+    <option name="totallyTimeSpent" value="184245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -1021,7 +1023,8 @@
     <MESSAGE value="pixel move_xyz" />
     <MESSAGE value="color" />
     <MESSAGE value="color_v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="color_v1" />
+    <MESSAGE value="color_v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="color_v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1286,30 +1289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matrix_trans.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usage.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hook.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="133" column="84" lean-forward="false" selection-start-line="133" selection-start-column="84" selection-end-line="133" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maps/elem.fdf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1422,36 +1401,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fdf2.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="86" column="35" lean-forward="false" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+        <state relative-caret-position="731">
+          <caret line="80" column="72" lean-forward="false" selection-start-line="80" selection-start-column="72" selection-end-line="80" selection-end-column="72" />
           <folding>
             <element signature="e#42#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/usage.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="66" lean-forward="false" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-214">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matrix_trans.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hook.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="67" column="61" lean-forward="false" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/update_coord.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="2220">
+          <caret line="148" column="24" lean-forward="false" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
           <folding />
         </state>
       </provider>
