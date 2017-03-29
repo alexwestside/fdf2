@@ -95,6 +95,7 @@ void	ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c)
 	(*mlx)->zero->b = 0;
 	ft_coord_update_z(&(*mlx)->zero, map_i, map_z, -1);
 	ft_coord_update_c(&(*mlx)->zero, map_i, map_c, -1);
-	ft_matrix_trans(&(*mlx)->angle, map_c, 0, (*mlx)->move);
+	(*mlx)->move[5] = 0;
+	ft_matrix_trans(&(*mlx)->angle, map_c, (*mlx)->move);
 	ft_uprising_coord(map_c);
 }

@@ -38,11 +38,15 @@
     <list default="true" id="ac31c5ea-2506-4a41-a8d8-3aaac6ec0ecf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/hook.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/hook.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/image.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/image.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/main.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/matrix_trans.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/matrix_trans.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/update_coord.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/update_coord.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fdf2" afterPath="$PROJECT_DIR$/cmake-build-debug/fdf2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdf2.h" afterPath="$PROJECT_DIR$/fdf2.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hook.c" afterPath="$PROJECT_DIR$/hook.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/image.c" afterPath="$PROJECT_DIR$/image.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matrix_trans.c" afterPath="$PROJECT_DIR$/matrix_trans.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/update_coord.c" afterPath="$PROJECT_DIR$/update_coord.c" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,8 +77,8 @@
       <file leaf-file-name="fdf2.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fdf2.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="74" column="57" lean-forward="false" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+            <state relative-caret-position="930">
+              <caret line="97" column="56" lean-forward="false" selection-start-line="96" selection-start-column="2" selection-end-line="97" selection-end-column="56" />
               <folding>
                 <element signature="e#43#68#0" expanded="true" />
               </folding>
@@ -85,8 +89,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state relative-caret-position="666">
+              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,8 +99,8 @@
       <file leaf-file-name="update_coord.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/update_coord.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="124" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="124" />
+            <state relative-caret-position="726">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,8 +109,8 @@
       <file leaf-file-name="matrix_trans.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matrix_trans.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="881">
-              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -135,8 +139,8 @@
       <file leaf-file-name="hook.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hook.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="116" column="33" lean-forward="false" selection-start-line="105" selection-start-column="4" selection-end-line="116" selection-end-column="33" />
+            <state relative-caret-position="416">
+              <caret line="101" column="44" lean-forward="false" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -300,12 +304,12 @@
         <option value="$PROJECT_DIR$/test" />
         <option value="$PROJECT_DIR$/maps/elem-col.fdf" />
         <option value="$PROJECT_DIR$/main.c" />
-        <option value="$PROJECT_DIR$/matrix_trans.c" />
         <option value="$PROJECT_DIR$/usage.c" />
         <option value="$PROJECT_DIR$/sub.c" />
+        <option value="$PROJECT_DIR$/image.c" />
+        <option value="$PROJECT_DIR$/matrix_trans.c" />
         <option value="$PROJECT_DIR$/update_coord.c" />
         <option value="$PROJECT_DIR$/fdf2.h" />
-        <option value="$PROJECT_DIR$/image.c" />
         <option value="$PROJECT_DIR$/hook.c" />
       </list>
     </option>
@@ -361,6 +365,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fdf2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdf2" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fdf2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -598,14 +616,7 @@
       <workItem from="1490700682297" duration="800000" />
       <workItem from="1490706982053" duration="407000" />
       <workItem from="1490708982126" duration="12350000" />
-      <workItem from="1490779833952" duration="10857000" />
-    </task>
-    <task id="LOCAL-00015" summary="center_1">
-      <created>1490173604865</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1490173604866</updated>
+      <workItem from="1490779833952" duration="12213000" />
     </task>
     <task id="LOCAL-00016" summary="window">
       <created>1490181468588</created>
@@ -943,11 +954,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490796774806</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="norm_8">
+      <created>1490800273346</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1490800273346</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192918000" />
+    <option name="totallyTimeSpent" value="194274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -1004,7 +1022,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pars_2" />
     <MESSAGE value="center" />
     <MESSAGE value="new_window" />
     <MESSAGE value="key_hook" />
@@ -1029,18 +1046,19 @@
     <MESSAGE value="norm_5" />
     <MESSAGE value="norm_6" />
     <MESSAGE value="norm_7" />
-    <option name="LAST_COMMIT_MESSAGE" value="norm_7" />
+    <MESSAGE value="norm_8" />
+    <option name="LAST_COMMIT_MESSAGE" value="norm_8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/hook.c</url>
-          <line>76</line>
-          <option name="timeStamp" value="147" />
+          <line>71</line>
+          <option name="timeStamp" value="187" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="186" />
+      <option name="time" value="188" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -1083,16 +1101,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fdf2.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="e#43#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
@@ -1383,11 +1391,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sub.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/update_coord.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="666">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdf2.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="97" column="56" lean-forward="false" selection-start-line="96" selection-start-column="2" selection-end-line="97" selection-end-column="56" />
+          <folding>
+            <element signature="e#43#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1401,50 +1443,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/matrix_trans.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="881">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/update_coord.c">
+    <entry file="file://$PROJECT_DIR$/libft/ft_bzero.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="124" lean-forward="true" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="124" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sub.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fdf2.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="74" column="57" lean-forward="false" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
-          <folding>
-            <element signature="e#43#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usage.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="48" lean-forward="true" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hook.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="116" column="33" lean-forward="false" selection-start-line="105" selection-start-column="4" selection-end-line="116" selection-end-column="33" />
+        <state relative-caret-position="416">
+          <caret line="101" column="44" lean-forward="false" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
           <folding />
         </state>
       </provider>

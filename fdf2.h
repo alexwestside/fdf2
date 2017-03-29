@@ -50,7 +50,7 @@ typedef struct		s_mlx
 	int				s_line;
 	t_point			*center;
 	t_point			*zero;
-	float			move[5];
+	float			move[6];
 	t_angle			*angle;
 }					t_mlx;
 
@@ -77,8 +77,8 @@ void				ft_draw_pixel(t_point p2, t_mlx **mlx);
 void				ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c);
 void				ft_coord_update_z(t_point **point_x, t_map **map_i, t_map **map_z, int i);
 void				ft_coord_update_c(t_point **point_x, t_map **map_i, t_map **map_c, int i);
-void				ft_matrix_trans(t_angle **angle, t_map **map_c, int id, float *move);
-void				ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, int id, float *move);
+void				ft_matrix_trans(t_angle **angle, t_map **map_c, float *move);
+void				ft_matrix_trans_2(t_angle **angle, t_map **map_z, t_map **map_c, float *move);
 void				ft_init_angle(t_angle **angle);
 int					key_exit(void *p);
 void				ft_check_fdf(t_map *map_i);
@@ -87,14 +87,14 @@ void				ft_get_color(char *color, t_point **p);
 int					ft_atoi_base(char *s, int num);
 void				ft_tolower_str(char **str);
 void				ft_uprising_coord(t_map **map_c);
-void				ft_turn_ordinata_y(t_angle **angle, t_map **map_c, int id, float *move);
-void				ft_turn_abscissa_x(t_angle **angle, t_map **map_c, int id, float *move);
-void				ft_turn_aplicate_z(t_angle **angle, t_map **map_c, int id, float *move);
+void				ft_turn_ordinata_y(t_angle **angle, t_map **map_c, float *move);
+void				ft_turn_abscissa_x(t_angle **angle, t_map **map_c, float *move);
+void				ft_turn_aplicate_z(t_angle **angle, t_map **map_c, float *move);
 void				ft_uprising_coord_3(t_map **map_c);
 void				ft_uprising_coord_2(t_map **map_z, float *move);
 
 void ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx);
-void ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx);
-void ft_key_hook_3(int key, t_fdf **fdf, t_mlx **mlx);
+//void ft_key_hook_2(int key, t_fdf **fdf, t_mlx **mlx);
+//void ft_key_hook_3(int key, t_fdf **fdf, t_mlx **mlx);
 
 #endif //FDF2_FDF2_H
