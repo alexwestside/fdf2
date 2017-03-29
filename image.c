@@ -1,7 +1,7 @@
 
 #include "fdf2.h"
 
-void	ft_draw_pixel(t_point p, t_map map, t_mlx **mlx, int color)
+void	ft_draw_pixel(t_point p, t_mlx **mlx)
 {
 	int	i;
 
@@ -23,10 +23,10 @@ void	ft_draw_line(t_point p1, t_point p2, t_map m, t_mlx **mlx)
 	const int	sy = p1.y < (int)p2.y ? 1 : -1;
 
 	error = dx - dy;
-	ft_draw_pixel(p2, m, mlx, 0xFFFFFF);
+	ft_draw_pixel(p2, mlx);
 	while (((int)p1.x != (int)p2.x || (int)p1.y != (int)p2.y) && ((int)p1.x > 0 && (int)p1.y < W_HIGHT && (int)p1.x < W_WIDTH && (int)p1.y > 0))
 	{
-		ft_draw_pixel(p1, m, mlx, 0xFFFFFF);
+		ft_draw_pixel(p1, mlx);
 		const int error2 = error * 2;
 
 		if (error2 > -dy)
