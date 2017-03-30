@@ -93,7 +93,6 @@ void	ft_parse_fdf(t_map **map, char *s, int fd)
 int		main(int ac, char **av)
 {
 	t_fdf	*fdf;
-	char *s;
 
 	if (ac != 2)
 		ft_fdf_error(1);
@@ -103,9 +102,8 @@ int		main(int ac, char **av)
 	ft_map_zero(&fdf->mlx, &fdf->map_i, &fdf->map_z, &fdf->map_c);
 	ft_get_window(&fdf, W_HIGHT, W_WIDTH, "42 fdf");
 	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
-	s = ft_help_window(s);
-	fdf->help = mlx_new_window(fdf->mlx->mlx, 250, 250, "HELP");
-	mlx_string_put(fdf->mlx->mlx, fdf->help, 0, 0, 0xFFFFFF, s);
+	fdf->help = mlx_new_window(fdf->mlx->mlx, 280, 350, "HELP");
+	ft_help_window(fdf, -1, 0);
 	mlx_hook(fdf->mlx->win, 2, 5, ft_key_hook, fdf);
 	mlx_hook(fdf->mlx->win, 17, 0, key_exit, fdf);
 	mlx_loop(fdf->mlx->mlx);

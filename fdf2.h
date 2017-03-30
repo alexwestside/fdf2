@@ -2,6 +2,15 @@
 #ifndef FDF2_FDF2_H
 # define FDF2_FDF2_H
 
+# define RED   "\x1B[31m"
+# define GRN   "\x1B[32m"
+# define YEL   "\x1B[33m"
+# define BLU   "\x1B[34m"
+# define MAG   "\x1B[35m"
+# define CYN   "\x1B[36m"
+# define WHT   "\x1B[37m"
+# define END   "\x1B[0m"
+
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
 # include "libft/get_next_line.h"
@@ -94,6 +103,7 @@ void				ft_turn_aplicate_z(t_angle **angle, t_map **map_c, float *move);
 void				ft_uprising_coord_3(t_map **map_c);
 void				ft_uprising_coord_2(t_map **map_z, float *move);
 void				ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx);
-char				*ft_help_window(char *s);
+void				ft_help_window(t_fdf *fdf, int i, int y);
+void				ft_init_help_comand(char ***str);
 
 #endif //FDF2_FDF2_H
