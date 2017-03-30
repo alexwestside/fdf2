@@ -61,6 +61,8 @@ typedef struct		s_mlx
 	t_point			*zero;
 	float			move[6];
 	t_angle			*angle;
+	int				error;
+	int 			error2;
 }					t_mlx;
 
 typedef	struct		s_fdf
@@ -82,7 +84,7 @@ void				ft_get_window(t_fdf **fdf, int h, int w, char *s);
 void				ft_put_image(t_fdf **fdf, int h, int w);
 int					ft_key_hook(int key, t_fdf *fdf, t_mlx *mlx);
 void				ft_draw_map_c(t_fdf **fdf);
-void				ft_draw_line(t_point p1, t_point p2, t_mlx **mlx, int error);
+void				ft_draw_line(t_point p1, t_point p2, t_mlx **mlx);
 void				ft_draw_pixel(t_point p2, t_mlx **mlx);
 void				ft_map_zero(t_mlx **mlx, t_map **map_i, t_map **map_z, t_map **map_c);
 void				ft_coord_update_z(t_point **point_x, t_map **map_i, t_map **map_z, int i);
