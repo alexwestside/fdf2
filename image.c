@@ -18,28 +18,29 @@ void	ft_draw_line(t_point p1, t_point p2, t_mlx **mlx)
 {
 	const int	dx = (int)fabsf((int)p1.x - (int)p2.x);
 	const int	dy = (int)fabsf((int)p1.y - (int)p2.y);
-	const int	sx = p1.x < (int)p2.x ? 1 : -1;
-	const int	sy = p1.y < (int)p2.y ? 1 : -1;
+	const int	sx = (int)p1.x < (int)p2.x ? 1 : -1;
+	const int	sy = (int)p1.y < (int)p2.y ? 1 : -1;
 
-	(*mlx)->error = dx - dy;
+	int error = dx - dy;
 	ft_draw_pixel(p2, mlx);
 	while (((int)p1.x != (int)p2.x || (int)p1.y != (int)p2.y) && ((int)p1.x > 0 && (int)p1.y < W_HIGHT && (int)p1.x < W_WIDTH && (int)p1.y > 0))
 	{
 		ft_draw_pixel(p1, mlx);
-		(*mlx)->error2 = (*mlx)->error * 2;
+		const int error2 = error * 2;
 
-		if ((*mlx)->error2 > -dy)
+		if (error2 > -dy)
 		{
-			(*mlx)->error -= dy;
-			(p1.x) += sx;
+			error -= dy;
+			p1.x += sx;
 		}
-		if ((*mlx)->error2 < dx)
+		if (error2 < dx)
 		{
-			(*mlx)->error += dx;
+			error += dx;
 			p1.y += sy;
 		}
 	}
 }
+
 
 void	ft_draw_map_c(t_fdf **fdf)
 {

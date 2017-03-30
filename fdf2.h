@@ -2,15 +2,6 @@
 #ifndef FDF2_FDF2_H
 # define FDF2_FDF2_H
 
-# define RED   "\x1B[31m"
-# define GRN   "\x1B[32m"
-# define YEL   "\x1B[33m"
-# define BLU   "\x1B[34m"
-# define MAG   "\x1B[35m"
-# define CYN   "\x1B[36m"
-# define WHT   "\x1B[37m"
-# define END   "\x1B[0m"
-
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
 # include "libft/get_next_line.h"
@@ -62,7 +53,6 @@ typedef struct		s_mlx
 	float			move[6];
 	t_angle			*angle;
 	int				error;
-	int 			error2;
 }					t_mlx;
 
 typedef	struct		s_fdf

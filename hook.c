@@ -55,7 +55,7 @@ void	ft_uprising_coord_3(t_map **map_c)
 	int	p;
 
 	i = -1;
-	p = (*map_c)->len > (*(*map_c)->line)->len ? (W_HIGHT - 600) / (*map_c)->len : (W_HIGHT - 600) / (*(*map_c)->line)->len;
+	p = (*map_c)->len > (*(*map_c)->line)->len ? (W_HIGHT - 300) / (*map_c)->len : (W_HIGHT - 300) / (*(*map_c)->line)->len;
 	while (++i < (*map_c)->len)
 	{
 		j = -1;
