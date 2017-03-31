@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/main.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/main.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/matrix_trans.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/matrix_trans.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/sub.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/sub.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/fdf2/sub2.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/sub2.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/update_coord.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/update_coord.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/fdf2/usage.c" "/nfs/2016/o/orizhiy/ClionProjects/fdf2/cmake-build-debug/CMakeFiles/fdf2.dir/usage.c.o"
   )

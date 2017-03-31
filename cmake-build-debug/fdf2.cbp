@@ -100,6 +100,9 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/fdf2/sub.c">
 			<Option target="fdf2"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/fdf2/sub2.c">
+			<Option target="fdf2"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/fdf2/update_coord.c">
 			<Option target="fdf2"/>
 		</Unit>

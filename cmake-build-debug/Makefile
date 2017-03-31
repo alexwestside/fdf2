@@ -258,6 +258,33 @@ sub.c.s:
 	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/sub.c.s
 .PHONY : sub.c.s
 
+sub2.o: sub2.c.o
+
+.PHONY : sub2.o
+
+# target to build an object file
+sub2.c.o:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/sub2.c.o
+.PHONY : sub2.c.o
+
+sub2.i: sub2.c.i
+
+.PHONY : sub2.i
+
+# target to preprocess a source file
+sub2.c.i:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/sub2.c.i
+.PHONY : sub2.c.i
+
+sub2.s: sub2.c.s
+
+.PHONY : sub2.s
+
+# target to generate assembly for a file
+sub2.c.s:
+	$(MAKE) -f CMakeFiles/fdf2.dir/build.make CMakeFiles/fdf2.dir/sub2.c.s
+.PHONY : sub2.c.s
+
 update_coord.o: update_coord.c.o
 
 .PHONY : update_coord.o
@@ -336,6 +363,9 @@ help:
 	@echo "... sub.o"
 	@echo "... sub.i"
 	@echo "... sub.s"
+	@echo "... sub2.o"
+	@echo "... sub2.i"
+	@echo "... sub2.s"
 	@echo "... update_coord.o"
 	@echo "... update_coord.i"
 	@echo "... update_coord.s"

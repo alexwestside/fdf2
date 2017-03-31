@@ -4,7 +4,7 @@ project(fdf2)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lmlx -framework OpenGL -framework AppKit")
 
-set(SOURCE_FILES main.c fdf2.h usage.c sub.c image.c update_coord.c hook.c matrix_trans.c)
+set(SOURCE_FILES main.c fdf2.h usage.c sub.c image.c update_coord.c hook.c matrix_trans.c sub2.c)
 
 add_executable(fdf2 ${SOURCE_FILES})
 

@@ -20,10 +20,11 @@ void	ft_coord_update_z(t_point **point_x, t_map **map_i, t_map **map_z, int i)
 			(*map_z)->line[i]->point[j] = (t_point *)malloc(sizeof(t_point));
 			(*map_z)->line[i]->point[j]->x = (*map_i)->line[i]->point[j]->x - (*point_x)->x;
 			(*map_z)->line[i]->point[j]->y = (*map_i)->line[i]->point[j]->y - (*point_x)->y;
-			(*map_z)->line[i]->point[j]->z = (*map_i)->line[i]->point[j]->z;
-			(*map_z)->line[i]->point[j]->r = (*map_i)->line[i]->point[j]->r;
-			(*map_z)->line[i]->point[j]->g = (*map_i)->line[i]->point[j]->g;
-			(*map_z)->line[i]->point[j]->b = (*map_i)->line[i]->point[j]->b;
+			ft_sub(map_z, map_i, &i, &j);
+//			(*map_z)->line[i]->point[j]->z = (*map_i)->line[i]->point[j]->z;
+//			(*map_z)->line[i]->point[j]->r = (*map_i)->line[i]->point[j]->r;
+//			(*map_z)->line[i]->point[j]->g = (*map_i)->line[i]->point[j]->g;
+//			(*map_z)->line[i]->point[j]->b = (*map_i)->line[i]->point[j]->b;
 		}
 		(*map_z)->line[i]->point[j] = NULL;
 	}
@@ -48,10 +49,11 @@ void	ft_coord_update_c(t_point **point_x, t_map **map_i, t_map **map_c, int i)
 			(*map_c)->line[i]->point[j] = (t_point *)malloc(sizeof(t_point));
 			(*map_c)->line[i]->point[j]->x = (*map_i)->line[i]->point[j]->x - (*point_x)->x;
 			(*map_c)->line[i]->point[j]->y = (*map_i)->line[i]->point[j]->y - (*point_x)->y;
-			(*map_c)->line[i]->point[j]->z = (*map_i)->line[i]->point[j]->z;
-			(*map_c)->line[i]->point[j]->r = (*map_i)->line[i]->point[j]->r;
-			(*map_c)->line[i]->point[j]->g = (*map_i)->line[i]->point[j]->g;
-			(*map_c)->line[i]->point[j]->b = (*map_i)->line[i]->point[j]->b;
+			ft_sub(map_c, map_i, &i, &j);
+//			(*map_c)->line[i]->point[j]->z = (*map_i)->line[i]->point[j]->z;
+//			(*map_c)->line[i]->point[j]->r = (*map_i)->line[i]->point[j]->r;
+//			(*map_c)->line[i]->point[j]->g = (*map_i)->line[i]->point[j]->g;
+//			(*map_c)->line[i]->point[j]->b = (*map_i)->line[i]->point[j]->b;
 		}
 		(*map_c)->line[i]->point[j] = NULL;
 	}
@@ -72,7 +74,6 @@ void	ft_uprising_coord(t_map **map_c)
 		{
 			(*map_c)->line[i]->point[j]->x = (*map_c)->line[i]->point[j]->x * p + W_WIDTH / 2;
 			(*map_c)->line[i]->point[j]->y = (*map_c)->line[i]->point[j]->y * p + W_HIGHT / 2;
-//			(*map_c)->line[i]->point[j]->z = (*map_c)->line[i]->point[j]->z * (p / 3) + W_HIGHT / 2;
 		}
 	}
 }
