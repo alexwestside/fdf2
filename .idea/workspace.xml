@@ -36,28 +36,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac31c5ea-2506-4a41-a8d8-3aaac6ec0ecf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sub2.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/image.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/image.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/sub.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/sub.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/update_coord.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/update_coord.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fdf2" afterPath="$PROJECT_DIR$/cmake-build-debug/fdf2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/fdf2.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/fdf2.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/fdf2.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdf2.h" afterPath="$PROJECT_DIR$/fdf2.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sub.c" afterPath="$PROJECT_DIR$/sub.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/update_coord.c" afterPath="$PROJECT_DIR$/update_coord.c" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fdf2.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fdf2.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fdf2.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="100" column="20" lean-forward="false" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+            <state relative-caret-position="642">
+              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="73" />
               <folding>
                 <element signature="e#43#68#0" expanded="true" />
               </folding>
@@ -112,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_coord.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update_coord.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/update_coord.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="77" lean-forward="true" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
+            <state relative-caret-position="330">
+              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -641,14 +620,7 @@
       <workItem from="1490779833952" duration="22208000" />
       <workItem from="1490861999753" duration="7012000" />
       <workItem from="1490873907954" duration="6473000" />
-      <workItem from="1490951253431" duration="11975000" />
-    </task>
-    <task id="LOCAL-00028" summary="pixel move">
-      <created>1490378656530</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1490378656530</updated>
+      <workItem from="1490951253431" duration="12345000" />
     </task>
     <task id="LOCAL-00029" summary="pixel move">
       <created>1490379021356</created>
@@ -986,11 +958,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490968168782</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="norm_17">
+      <created>1490969863348</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1490969863348</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229729000" />
+    <option name="totallyTimeSpent" value="230099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="2560" height="1337" extended-state="0" />
@@ -1489,16 +1468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fdf2.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="100" column="20" lean-forward="false" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
-          <folding>
-            <element signature="e#43#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sub2.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1517,9 +1486,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/update_coord.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="77" lean-forward="true" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
+        <state relative-caret-position="330">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdf2.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="73" />
+          <folding>
+            <element signature="e#43#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
