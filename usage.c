@@ -15,7 +15,7 @@ void	ft_fdf_error(int id)
 	}
 	else if (id == 3)
 	{
-		ft_printf("file error!!!\n");
+		ft_printf("Found wrong line length. Exiting.\n");
 		exit(EXIT_FAILURE);
 	}
 }
