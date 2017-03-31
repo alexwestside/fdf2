@@ -1,16 +1,16 @@
 
 #include "fdf2.h"
 
-void	ft_check_fdf(t_map **map_i)
+void	ft_check_fdf(t_map *map_i)
 {
 	int	i;
 	int	len;
 
 	i = 0;
-	len = (*map_i)->line[i]->len;
-	while (i < (*map_i)->len)
+	len = map_i->line[i]->len;
+	while (i < map_i->len)
 	{
-		if (len != (*map_i)->line[i]->len)
+		if (len != map_i->line[i]->len)
 			ft_fdf_error(3);
 		i++;
 	}

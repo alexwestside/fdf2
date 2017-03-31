@@ -4,21 +4,29 @@
 int		ft_init_lines(t_line ***line, char *s, int fd)
 {
 	int		cl;
-	char	tmp;
+	char	*tmp;
 
 	cl = 0;
 	if ((fd = open(s, O_RDONLY)) < 0)
 		ft_fdf_error(3);
-	while (read(fd, &tmp, 1))
-	{
-		if (tmp == '\n')
-			cl++;
-	}
+	while(get_next_line(fd, &tmp))
+		cl++;
 	close(fd);
 	if (!(*line = (t_line **)malloc(sizeof(t_line *) * (cl + 1))))
 		ft_fdf_error(2);
 	if (cl == 0)
 		return (1);
+
+//	while (read(fd, &tmp, 1))
+//	{
+//		if (tmp == '\n')
+//			cl++;
+//	}
+//	close(fd);
+//	if (!(*line = (t_line **)malloc(sizeof(t_line *) * (cl + 1))))
+//		ft_fdf_error(2);
+//	if (cl == 0)
+//		return (1);
 	return (cl);
 }
 
@@ -98,7 +106,7 @@ int		main(int ac, char **av)
 		ft_fdf_error(1);
 	!(fdf = (t_fdf *)malloc(sizeof(t_fdf))) ? ft_fdf_error(2) : 0;
 	ft_parse_fdf(&fdf->map_i, av[1], 0);
-	ft_check_fdf(&fdf->map_i);
+	ft_check_fdf(fdf->map_i);
 	ft_map_zero(&fdf->mlx, &fdf->map_i, &fdf->map_z, &fdf->map_c);
 	ft_get_window(&fdf, W_HIGHT, W_WIDTH, "42 fdf");
 	ft_put_image(&fdf, W_HIGHT, W_WIDTH);
