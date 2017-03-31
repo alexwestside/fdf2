@@ -53,7 +53,7 @@ void	ft_init_points(char *s, t_line **l, int *y)
 	while (str[cp])
 		cp++;
 	!(*l = (t_line *)malloc(sizeof(t_line))) ? ft_fdf_error(2) : 0;
-	!((*l)->point = (t_point **)malloc(sizeof(t_point *) * cp)) ? ft_fdf_error(2) : 0;
+	!((*l)->point = (t_point **)malloc(sizeof(t_point *) * cp + 1)) ? ft_fdf_error(2) : 0;
 	p = (*l)->point;
 	(*l)->len = cp;
 	while (*str)
@@ -98,7 +98,7 @@ int		main(int ac, char **av)
 		ft_fdf_error(1);
 	!(fdf = (t_fdf *)malloc(sizeof(t_fdf))) ? ft_fdf_error(2) : 0;
 	ft_parse_fdf(&fdf->map_i, av[1], 0);
-	ft_check_fdf(fdf->map_i);
+	ft_check_fdf(&fdf->map_i);
 	ft_map_zero(&fdf->mlx, &fdf->map_i, &fdf->map_z, &fdf->map_c);
 	ft_get_window(&fdf, W_HIGHT, W_WIDTH, "42 fdf");
 	ft_put_image(&fdf, W_HIGHT, W_WIDTH);

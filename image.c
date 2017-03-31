@@ -8,16 +8,19 @@ void	ft_draw_pixel(t_point p, t_mlx **mlx)
 	i = (((int)p.x * 4) + ((int)p.y * (*mlx)->s_line));
 	if (i >= 0 && i <= W_WIDTH * 4 * W_HIGHT && ((int)p.x >= 0 && (int)p.x <= W_WIDTH) && ((int)p.y >= 0 && (int)p.y <= W_HIGHT))
 	{
-		(*mlx)->img_str[i] = (char)p.r;
-		(*mlx)->img_str[++i] = (char)p.g;
-		(*mlx)->img_str[++i] = (char)p.b;
+		if ((*mlx)->img_str && i < W_HIGHT * W_WIDTH * 4)
+		{
+			(*mlx)->img_str[i] = (char) p.r;
+			(*mlx)->img_str[++i] = (char) p.g;
+			(*mlx)->img_str[++i] = (char) p.b;
+		}
 	}
 }
 
 void	ft_draw_line(t_point p1, t_point p2, t_mlx **mlx)
 {
-	const int	dx = (int)fabsf((int)p1.x - (int)p2.x);
-	const int	dy = (int)fabsf((int)p1.y - (int)p2.y);
+	const int	dx = abs((int)p1.x - (int)p2.x);
+	const int	dy = abs((int)p1.y - (int)p2.y);
 	const int	sx = (int)p1.x < (int)p2.x ? 1 : -1;
 	const int	sy = (int)p1.y < (int)p2.y ? 1 : -1;
 

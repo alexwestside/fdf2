@@ -95,8 +95,8 @@ void	ft_key_hook_1(int key, t_fdf **fdf, t_mlx **mlx)
 	(key == 123) ? (*mlx)->move[0] = -1 : 0;
 	(key == 126) ? (*mlx)->move[1] = -1 : 0;
 	(key == 125) ? (*mlx)->move[1] = 1 : 0;
-	(key == 78) ? (*mlx)->move[2] = 0.91 : 0;
-	(key == 69) ? (*mlx)->move[2] = 1.09 : 0;
+	(key == 78) ? (*mlx)->move[2] = 0.91 : 0; /*0.91*/
+	(key == 69) ? (*mlx)->move[2] = 1.09 : 0; /*1.09*/
 	(key == 89) ? (*mlx)->move[5] = 3 : 0;
 	(key == 91) ? (*mlx)->move[5] = 4 : 0;
 	(key == 92) ? (*mlx)->move[5] = 5 : 0;
