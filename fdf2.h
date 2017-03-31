@@ -53,6 +53,7 @@ typedef struct		s_mlx
 	float			move[6];
 	t_angle			*angle;
 	int				error;
+	int				error2;
 }					t_mlx;
 
 typedef	struct		s_fdf
